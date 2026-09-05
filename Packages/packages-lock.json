@@ -133,11 +133,7 @@
     },
     "com.unity.probuilder": {
       "version": "6.0.9",
-<<<<<<< Updated upstream
-      "depth": 1,
-=======
       "depth": 0,
->>>>>>> Stashed changes
       "source": "registry",
       "dependencies": {
         "com.unity.shadergraph": "17.0.3",
@@ -188,11 +184,7 @@
     },
     "com.unity.settings-manager": {
       "version": "2.1.1",
-<<<<<<< Updated upstream
-      "depth": 2,
-=======
       "depth": 1,
->>>>>>> Stashed changes
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"
@@ -217,7 +209,6 @@
       },
       "url": "https://packages.unity.com"
     },
-<<<<<<< Updated upstream
     "com.unity.terrain-tools": {
       "version": "5.3.3",
       "depth": 1,
@@ -228,8 +219,6 @@
       },
       "url": "https://packages.unity.com"
     },
-=======
->>>>>>> Stashed changes
     "com.unity.test-framework": {
       "version": "1.6.0",
       "depth": 0,
