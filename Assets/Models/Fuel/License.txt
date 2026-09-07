@@ -1,0 +1,4 @@
+Plastic Jerrycan - Ulan Cabanilla / Poly Haven
+https://polyhaven.com/a/plastic_jerrycan
+License: CC0 1.0 Universal - https://creativecommons.org/publicdomain/zero/1.0/
+Mesh converted from the original glTF to OBJ. Original 1k diffuse texture.
