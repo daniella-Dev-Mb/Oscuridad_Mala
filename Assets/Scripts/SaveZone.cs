@@ -4,7 +4,7 @@ using UnityEngine;
 public class SaveZone : MonoBehaviour
 {
     [SerializeField] private Transform player;
-    private float zone = 5.0f;
+    protected float zone = 5.0f;
     private bool detectPlayer=false;
     void Update()
     {
@@ -32,4 +32,5 @@ public class SaveZone : MonoBehaviour
         Gizmos.color = Color.yellow;
         Gizmos.DrawSphere(transform.position, zone);
     }
+
 }

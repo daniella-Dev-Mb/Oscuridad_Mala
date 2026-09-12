@@ -32,6 +32,7 @@ public class PlayerController : MonoBehaviour
 
     //Esto lo hice yo (rami)
     private bool inSafeZone = false;
+    //
 
     void Awake()
     {
