@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7270222658696724241, guid: 03efce16b0e3eac47b62b223808baa9f, type: 3}
       propertyPath: m_Name
-      value: Jugador LanternFix
+      value: Jugador Camera
       objectReference: {fileID: 0}
     - target: {fileID: 7270222658696724269, guid: 03efce16b0e3eac47b62b223808baa9f, type: 3}
       propertyPath: m_LocalPosition.x
