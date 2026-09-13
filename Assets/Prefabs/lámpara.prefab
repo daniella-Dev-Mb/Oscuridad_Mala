@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6749337205700131529}
   - component: {fileID: 4778889158349134102}
   - component: {fileID: 4488549987926765148}
+  - component: {fileID: 6219181464292172324}
   m_Layer: 0
   m_Name: "l\xE1mpara"
   m_TagString: Untagged
@@ -2826,6 +2827,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &6219181464292172324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 99427326752494515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e12a2efdfd0a5e94ab70edf4d19c42d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SaveZone
+  player: {fileID: 0}
 --- !u!1 &1173153249986764445
 GameObject:
   m_ObjectHideFlags: 0
