@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3473608751933434472}
   - component: {fileID: 6749337205700131529}
   - component: {fileID: 4778889158349134102}
-  - component: {fileID: 4488549987926765148}
+  - component: {fileID: 6219181464292172324}
   m_Layer: 0
   m_Name: "l\xE1mpara"
   m_TagString: Untagged
@@ -2804,28 +2804,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 99427326752494515}
   m_Mesh: {fileID: 0}
---- !u!64 &4488549987926765148
-MeshCollider:
+--- !u!114 &6219181464292172324
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 99427326752494515}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e12a2efdfd0a5e94ab70edf4d19c42d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SaveZone
+  player: {fileID: 0}
 --- !u!1 &1173153249986764445
 GameObject:
   m_ObjectHideFlags: 0
@@ -2839,7 +2830,7 @@ GameObject:
   - component: {fileID: 1529170401252702929}
   - component: {fileID: 6145767938518994392}
   - component: {fileID: 1090990281180604710}
-  - component: {fileID: 7447039555381113914}
+  - component: {fileID: 9126276450397925508}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -3481,8 +3472,8 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1173153249986764445}
   m_Mesh: {fileID: 0}
---- !u!64 &7447039555381113914
-MeshCollider:
+--- !u!65 &9126276450397925508
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -3499,10 +3490,9 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  serializedVersion: 3
+  m_Size: {x: 0.54479873, y: 5.126899, z: 0.58389944}
+  m_Center: {x: -0.020253317, y: 0.33189404, z: 0.00020167658}
 --- !u!1 &7942721309830485834
 GameObject:
   m_ObjectHideFlags: 0
@@ -3516,7 +3506,6 @@ GameObject:
   - component: {fileID: 6983769948235790516}
   - component: {fileID: 5630126018115978040}
   - component: {fileID: 2018711348282412458}
-  - component: {fileID: 5575397334650103238}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -7088,26 +7077,4 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7942721309830485834}
-  m_Mesh: {fileID: 0}
---- !u!64 &5575397334650103238
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7942721309830485834}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
   m_Mesh: {fileID: 0}
