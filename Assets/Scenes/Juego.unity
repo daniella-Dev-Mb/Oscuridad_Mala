@@ -30412,6 +30412,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+  - component: {fileID: 890010003}
   - component: {fileID: 1159841103}
   - component: {fileID: 1159841102}
   - component: {fileID: 1159841101}
@@ -54894,6 +54895,58 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2143554287}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &890010003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1159841100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cc6191b381b7af49ad25a9259a72479, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::FuelSpawner
+  terrain: {fileID: 1159841102}
+  pickupPrefab: {fileID: 2522209389229104986, guid: 12b4dc55cfef8ea4a917d1916b5156e7, type: 3}
+  grid: {x: 14, y: 14}
+  edgeMargin: 5
+  respawnDelay: 30
+  maxSlope: 30
+  clearanceRadius: 0.75
+  groundOffset: 0.05
+  placementAttempts: 32
+  obstacleLayers:
+    serializedVersion: 2
+    m_Bits: 4294967291
+  spawnBoundary:
+  - {x: 362, y: 370}
+  - {x: 430, y: 370}
+  - {x: 470, y: 348}
+  - {x: 501, y: 329}
+  - {x: 521, y: 323}
+  - {x: 531, y: 308}
+  - {x: 531, y: 272}
+  - {x: 505, y: 250}
+  - {x: 530, y: 239}
+  - {x: 531, y: 213}
+  - {x: 503, y: 194}
+  - {x: 458, y: 182}
+  - {x: 449, y: 111}
+  - {x: 398, y: 101}
+  - {x: 350, y: 128}
+  - {x: 322, y: 123}
+  - {x: 308, y: 135}
+  - {x: 320, y: 163}
+  - {x: 320, y: 215}
+  - {x: 326, y: 235}
+  - {x: 295, y: 246}
+  - {x: 283, y: 263}
+  - {x: 284, y: 279}
+  - {x: 300, y: 292}
+  - {x: 325, y: 292}
+  - {x: 341, y: 282}
+  - {x: 355, y: 331}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
