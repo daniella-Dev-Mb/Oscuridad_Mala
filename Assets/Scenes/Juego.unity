@@ -24510,10 +24510,10 @@ MonoBehaviour:
   HorizontalAxis:
     Value: 0
     Center: -0
-    Range: {x: -120, y: 120}
+    Range: {x: -180, y: 180}
     Wrap: 1
     Recentering:
-      Enabled: 1
+      Enabled: 0
       Wait: 1
       Time: 2
     Restrictions: 0
@@ -24523,7 +24523,7 @@ MonoBehaviour:
     Range: {x: 0, y: 25}
     Wrap: 0
     Recentering:
-      Enabled: 1
+      Enabled: 0
       Wait: 1
       Time: 2
     Restrictions: 0
