@@ -30,6 +30,9 @@ public class PlayerController : MonoBehaviour
     float timeScaleBeforeDefeat;
     bool defeated;
 
+    //Esto lo hice yo (rami)
+    private bool inSafeZone = false;
+    //
 
     void Awake()
     {
@@ -86,7 +89,7 @@ public class PlayerController : MonoBehaviour
 
     void UpdateLantern()
     {
-        if (lantern == null || Time.deltaTime <= 0f)
+        if (lantern == null || Time.deltaTime <= 0f || inSafeZone) //esto tmb lo cambié 
         {
             return;
         }
@@ -207,6 +210,16 @@ public class PlayerController : MonoBehaviour
         }
         moveAction.Dispose();
         sprintAction.Dispose();
+    }
+    //Esto es nuevo
+    public void EnterSafeZone()
+    {
+        inSafeZone = true;
+    }
+
+    public void ExitSafeZone()
+    {
+        inSafeZone = false;
     }
 }
 
