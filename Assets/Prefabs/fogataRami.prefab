@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2695317369674839047}
   - component: {fileID: 9214517125167251}
+  - component: {fileID: 2295025569715410310}
   m_Layer: 0
   m_Name: fogataRami
   m_TagString: Untagged
@@ -46,6 +47,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   player: {fileID: 0}
+--- !u!65 &2295025569715410310
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6704374742800645471}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.395359, y: 1.0172592, z: 1.325882}
+  m_Center: {x: -0.013566971, y: 0.3586753, z: 0.021492004}
 --- !u!1001 &9086487800100061157
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -146,7 +168,19 @@ PrefabInstance:
       propertyPath: m_Name
       value: objetos
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6070118807784676165, guid: 1ce590ebafa18b84eafb83af1f3d05af, type: 3}
+    - {fileID: 4939332979053021435, guid: 1ce590ebafa18b84eafb83af1f3d05af, type: 3}
+    - {fileID: 8033909848226394929, guid: 1ce590ebafa18b84eafb83af1f3d05af, type: 3}
+    - {fileID: 6677273759590284165, guid: 1ce590ebafa18b84eafb83af1f3d05af, type: 3}
+    - {fileID: 4446376576176416202, guid: 1ce590ebafa18b84eafb83af1f3d05af, type: 3}
+    - {fileID: 2443500360492894311, guid: 1ce590ebafa18b84eafb83af1f3d05af, type: 3}
+    - {fileID: 9059767724366718390, guid: 1ce590ebafa18b84eafb83af1f3d05af, type: 3}
+    - {fileID: 7645745730701986697, guid: 1ce590ebafa18b84eafb83af1f3d05af, type: 3}
+    - {fileID: 1493220015095412034, guid: 1ce590ebafa18b84eafb83af1f3d05af, type: 3}
+    - {fileID: 1700133266786149584, guid: 1ce590ebafa18b84eafb83af1f3d05af, type: 3}
+    - {fileID: 8365322088340278288, guid: 1ce590ebafa18b84eafb83af1f3d05af, type: 3}
+    - {fileID: 4471355571444927490, guid: 1ce590ebafa18b84eafb83af1f3d05af, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
