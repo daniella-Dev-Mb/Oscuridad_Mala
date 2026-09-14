@@ -43,5 +43,6 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9ff1ff438c896fd4e9a9e2a656ae440b, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GasSpawner
-  oilBottles: []
+  m_EditorClassIdentifier: Assembly-CSharp::OilSpawner
+  oilBottles:
+  - {fileID: 6759496605110331156, guid: 12b4dc55cfef8ea4a917d1916b5156e7, type: 3}
