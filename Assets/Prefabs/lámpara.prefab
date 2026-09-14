@@ -2816,7 +2816,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e12a2efdfd0a5e94ab70edf4d19c42d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SaveZone
-  player: {fileID: 0}
+  player: {fileID: 8378360008797131859, guid: 4217bc85820a8654d84099cb96c5ef1b, type: 3}
 --- !u!1 &1173153249986764445
 GameObject:
   m_ObjectHideFlags: 0
