@@ -1766,6 +1766,8 @@ MonoBehaviour:
     width: 200
     height: 24
   lanternHudLabel: Linterna
+  interactionDistance: 2
+  interactionHeight: 0.4
 --- !u!1 &7270222659055618472
 GameObject:
   m_ObjectHideFlags: 0
