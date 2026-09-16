@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 895313055930840089}
   - component: {fileID: 4246418166826951774}
   - component: {fileID: 7757812203934010952}
-  - component: {fileID: 143298770145235853}
   m_Layer: 0
   m_Name: "Cami\xF3n"
   m_TagString: Untagged
@@ -334,28 +333,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 161863063313845856}
   m_Mesh: {fileID: 0}
---- !u!64 &143298770145235853
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 161863063313845856}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!1 &2972392435167203402
 GameObject:
   m_ObjectHideFlags: 0
@@ -369,7 +346,6 @@ GameObject:
   - component: {fileID: 1926289644444932232}
   - component: {fileID: 3475592252448376114}
   - component: {fileID: 8198116633590102540}
-  - component: {fileID: 7118982759763430628}
   m_Layer: 0
   m_Name: Sphere (1)
   m_TagString: Untagged
@@ -8992,28 +8968,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2972392435167203402}
   m_Mesh: {fileID: 0}
---- !u!64 &7118982759763430628
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2972392435167203402}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!1 &4625575414715728325
 GameObject:
   m_ObjectHideFlags: 0
@@ -9027,7 +8981,6 @@ GameObject:
   - component: {fileID: 442457956701433184}
   - component: {fileID: 330680984448274732}
   - component: {fileID: 7915050214178768908}
-  - component: {fileID: 6458522396167544975}
   m_Layer: 0
   m_Name: Sphere (3)
   m_TagString: Untagged
@@ -17650,28 +17603,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4625575414715728325}
   m_Mesh: {fileID: 0}
---- !u!64 &6458522396167544975
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4625575414715728325}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!1 &4756266801921097330
 GameObject:
   m_ObjectHideFlags: 0
@@ -17685,7 +17616,6 @@ GameObject:
   - component: {fileID: 4373569470170710800}
   - component: {fileID: 6498508431526694432}
   - component: {fileID: 5461573975752519346}
-  - component: {fileID: 254176988542729281}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -26308,28 +26238,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4756266801921097330}
   m_Mesh: {fileID: 0}
---- !u!64 &254176988542729281
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4756266801921097330}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!1 &5203276551405518206
 GameObject:
   m_ObjectHideFlags: 0
@@ -26343,7 +26251,6 @@ GameObject:
   - component: {fileID: 4152909005576088274}
   - component: {fileID: 6737607581358734291}
   - component: {fileID: 8328070282149048278}
-  - component: {fileID: 8391080965988365776}
   m_Layer: 0
   m_Name: Sphere (2)
   m_TagString: Untagged
@@ -34966,28 +34873,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5203276551405518206}
   m_Mesh: {fileID: 0}
---- !u!64 &8391080965988365776
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5203276551405518206}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!1 &7960665062141090253
 GameObject:
   m_ObjectHideFlags: 0
@@ -35001,7 +34886,7 @@ GameObject:
   - component: {fileID: 2199247377645557313}
   - component: {fileID: 5967861275088947724}
   - component: {fileID: 6778963547418727731}
-  - component: {fileID: 5725945474072209946}
+  - component: {fileID: 4149357756710938472}
   m_Layer: 0
   m_Name: "Cami\xF3n"
   m_TagString: Untagged
@@ -35327,8 +35212,8 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7960665062141090253}
   m_Mesh: {fileID: 0}
---- !u!64 &5725945474072209946
-MeshCollider:
+--- !u!65 &4149357756710938472
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -35345,7 +35230,6 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  serializedVersion: 3
+  m_Size: {x: 3.8758087, y: 3.8023908, z: 9.830353}
+  m_Center: {x: -0.86120605, y: -0.97861683, z: -0.45117188}

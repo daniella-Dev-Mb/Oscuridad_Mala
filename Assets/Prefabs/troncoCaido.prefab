@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7795728430850075450}
   - component: {fileID: 5452221622282323994}
   - component: {fileID: 4253090098636246024}
-  - component: {fileID: 3761719812233337337}
+  - component: {fileID: 1770378473914445026}
   m_Layer: 0
   m_Name: troncoCaido
   m_TagString: Untagged
@@ -3095,8 +3095,8 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6792613629093396254}
   m_Mesh: {fileID: 0}
---- !u!64 &3761719812233337337
-MeshCollider:
+--- !u!65 &1770378473914445026
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -3113,7 +3113,6 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  serializedVersion: 3
+  m_Size: {x: 1.5663528, y: 4.998171, z: 1.5874461}
+  m_Center: {x: 0.009029388, y: -0.3547361, z: -0.059361935}

@@ -24,6 +24,11 @@ public class PlayerController : MonoBehaviour
     Animator animator;
     InputAction moveAction;
     InputAction sprintAction;
+    InputAction interactAction;
+    [Min(0f)] public float interactionDistance = 2f;
+    public float interactionHeight = 0.4f;
+    FuelPickup nearbyFuel;
+    GUIStyle pickupPromptStyle;
     float verticalSpeed;
     bool isRunning;
     float lanternCharge = 1f;
@@ -31,7 +36,8 @@ public class PlayerController : MonoBehaviour
     bool defeated;
 
     //Esto lo hice yo (rami)
-    private bool inSafeZone = false;
+    private int safeZoneCount;
+    private bool inSafeZone => safeZoneCount > 0;
     //
 
     void Awake()
@@ -40,6 +46,7 @@ public class PlayerController : MonoBehaviour
         playerCamera = Camera.main;
         moveAction = inputActions.FindAction("Player/Move", true).Clone();
         sprintAction = inputActions.FindAction("Player/Sprint", true).Clone();
+        interactAction = inputActions.FindAction("Player/Interact", true).Clone();
 
         animator = visual.GetComponentInChildren<Animator>();
         if (animator == null)
@@ -73,11 +80,17 @@ public class PlayerController : MonoBehaviour
     {
         moveAction.Enable();
         sprintAction.Enable();
+        interactAction.Enable();
         verticalSpeed = 0f;
+        SetCursorLocked(true);
     }
 
     void Update()
     {
+        if (Keyboard.current != null && Keyboard.current.escapeKey.wasPressedThisFrame)
+            SetCursorLocked(false);
+        else if (Application.isFocused && Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
+            SetCursorLocked(true);
         UpdateLantern();
         if (defeated)
         {
@@ -85,6 +98,47 @@ public class PlayerController : MonoBehaviour
         }
         MovePlayer();
         UpdateAnimation();
+        nearbyFuel = FindNearbyFuel();
+        if (Time.deltaTime > 0f && nearbyFuel != null && interactAction.WasPressedThisFrame())
+        {
+            if (nearbyFuel.TryCollect(this)) nearbyFuel = null;
+        }
+    }
+
+    FuelPickup FindNearbyFuel()
+    {
+        Vector3 origin = transform.position + Vector3.up * interactionHeight;
+        Collider[] nearby = Physics.OverlapSphere(origin, interactionDistance,
+            Physics.DefaultRaycastLayers, QueryTriggerInteraction.Collide);
+        float nearestDistance = float.PositiveInfinity;
+        FuelPickup target = null;
+        foreach (Collider candidate in nearby)
+        {
+            FuelPickup pickup = candidate.GetComponentInParent<FuelPickup>();
+            if (pickup == null || !pickup.isActiveAndEnabled) continue;
+            Vector3 destination = pickup.transform.position + Vector3.up * interactionHeight;
+            float distance = Vector3.Distance(origin, destination);
+            if (distance <= interactionDistance && distance < nearestDistance && CanReachFuel(origin, destination, pickup))
+            {
+                nearestDistance = distance;
+                target = pickup;
+            }
+        }
+        return target;
+    }
+
+    bool CanReachFuel(Vector3 origin, Vector3 destination, FuelPickup pickup)
+    {
+        Vector3 direction = destination - origin;
+        RaycastHit[] hits = Physics.RaycastAll(origin, direction.normalized, direction.magnitude,
+            Physics.DefaultRaycastLayers, QueryTriggerInteraction.Ignore);
+        foreach (RaycastHit hit in hits)
+        {
+            if (hit.collider.transform.IsChildOf(transform)) continue;
+            if (hit.collider.GetComponentInParent<FuelPickup>() == pickup) continue;
+            return false;
+        }
+        return true;
     }
 
     void UpdateLantern()
@@ -124,6 +178,28 @@ public class PlayerController : MonoBehaviour
         GUI.DrawTexture(fill, Texture2D.whiteTexture);
         GUI.color = previousColor;
         GUI.Label(lanternHudRect, lanternHudLabel);
+        DrawPickupPrompt();
+    }
+
+    void DrawPickupPrompt()
+    {
+        if (nearbyFuel == null || playerCamera == null || defeated || Time.timeScale <= 0f)
+            return;
+
+        Vector3 screen = playerCamera.WorldToScreenPoint(nearbyFuel.transform.position + Vector3.up);
+        if (screen.z <= 0f || screen.x < 0f || screen.x > Screen.width ||
+            screen.y < 0f || screen.y > Screen.height) return;
+
+        if (pickupPromptStyle == null)
+        {
+            pickupPromptStyle = new GUIStyle(GUI.skin.box);
+            pickupPromptStyle.alignment = TextAnchor.MiddleCenter;
+            pickupPromptStyle.fontSize = 16;
+            pickupPromptStyle.normal.textColor = Color.white;
+        }
+        string message = lanternCharge >= 1f ? "Linterna llena" : "Pulsa E para agarrar";
+        GUI.Box(new Rect(screen.x - 100f, Screen.height - screen.y - 36f, 200f, 32f),
+            message, pickupPromptStyle);
     }
 
     public bool AddFuel(float seconds)
@@ -195,10 +271,24 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat("speed", speed);
     }
 
+    void SetCursorLocked(bool locked)
+    {
+        Cursor.lockState = locked ? CursorLockMode.Locked : CursorLockMode.None;
+        Cursor.visible = !locked;
+    }
+
+    void OnApplicationFocus(bool focused)
+    {
+        if (!focused) SetCursorLocked(false);
+    }
+
     void OnDisable()
     {
+        nearbyFuel = null;
+        SetCursorLocked(false);
         moveAction.Disable();
         sprintAction.Disable();
+        interactAction.Disable();
 
     }
 
@@ -210,16 +300,17 @@ public class PlayerController : MonoBehaviour
         }
         moveAction.Dispose();
         sprintAction.Dispose();
+        interactAction.Dispose();
     }
     //Esto es nuevo
     public void EnterSafeZone()
     {
-        inSafeZone = true;
+        safeZoneCount++;
     }
 
     public void ExitSafeZone()
     {
-        inSafeZone = false;
+        safeZoneCount = Mathf.Max(0, safeZoneCount - 1);
     }
 }
 

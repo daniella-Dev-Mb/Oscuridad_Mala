@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8164226982128853283}
   - component: {fileID: 7959131906306124699}
   - component: {fileID: 3730928405244985084}
-  - component: {fileID: 5734785424886259951}
+  - component: {fileID: 8874002899270673202}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -33,7 +33,10 @@ Transform:
   m_LocalPosition: {x: -0.08817223, y: -1.0651143, z: 0.0146484375}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 8920774493979343889}
+  - {fileID: 8922631072926997283}
+  - {fileID: 1204432735129204694}
   m_Father: {fileID: 7358336682895095462}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8049584446365616464
@@ -330,8 +333,8 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 388695134061159035}
   m_Mesh: {fileID: 0}
---- !u!64 &5734785424886259951
-MeshCollider:
+--- !u!65 &8874002899270673202
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -348,10 +351,9 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  serializedVersion: 3
+  m_Size: {x: 2.8073585, y: 1.8430363, z: 3.665619}
+  m_Center: {x: 0, y: 0.75865597, z: 0}
 --- !u!1 &627415183486181306
 GameObject:
   m_ObjectHideFlags: 0
@@ -365,7 +367,6 @@ GameObject:
   - component: {fileID: 2814386699555287691}
   - component: {fileID: 1866379404671663742}
   - component: {fileID: 5007292090541448302}
-  - component: {fileID: 5450201544491379369}
   m_Layer: 0
   m_Name: carpa
   m_TagString: Untagged
@@ -386,9 +387,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 8920774493979343889}
-  - {fileID: 8922631072926997283}
-  - {fileID: 1204432735129204694}
   - {fileID: 5093447160529321539}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 51.21}
@@ -690,28 +688,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 627415183486181306}
   m_Mesh: {fileID: 0}
---- !u!64 &5450201544491379369
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 627415183486181306}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!1 &842023350459375921
 GameObject:
   m_ObjectHideFlags: 0
@@ -725,7 +701,6 @@ GameObject:
   - component: {fileID: 3366226950099282976}
   - component: {fileID: 6074201066840926894}
   - component: {fileID: 330687965641771245}
-  - component: {fileID: 7565510031332040609}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -741,12 +716,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 842023350459375921}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0.77944726, w: 0.6264679}
-  m_LocalPosition: {x: 1.021, y: -0.917, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.43216437, w: 0.90179485}
+  m_LocalPosition: {x: 0.57941437, y: 0.95733035, z: -0.0146484375}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7358336682895095462}
+  m_Father: {fileID: 5093447160529321539}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -51.21}
 --- !u!114 &2549495817573413636
 MonoBehaviour:
@@ -1046,28 +1021,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 842023350459375921}
   m_Mesh: {fileID: 0}
---- !u!64 &7565510031332040609
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 842023350459375921}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!1 &1271675531259292522
 GameObject:
   m_ObjectHideFlags: 0
@@ -1081,7 +1034,6 @@ GameObject:
   - component: {fileID: 3804990512284061502}
   - component: {fileID: 6587113890836611224}
   - component: {fileID: 4793133333676622734}
-  - component: {fileID: 4037547041198258045}
   m_Layer: 0
   m_Name: carpa
   m_TagString: Untagged
@@ -1097,12 +1049,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1271675531259292522}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0.43216446, w: 0.9017949}
-  m_LocalPosition: {x: 0.497, y: -0.576, z: -1.6965942}
+  m_LocalRotation: {x: -0, y: -0, z: -0.000000029802315, w: 1}
+  m_LocalPosition: {x: -0.0146484375, y: 0.7625253, z: -1.7112427}
   m_LocalScale: {x: 0.49999994, y: 1, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7358336682895095462}
+  m_Father: {fileID: 5093447160529321539}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5408924303722296972
 MonoBehaviour:
@@ -1723,28 +1675,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1271675531259292522}
   m_Mesh: {fileID: 0}
---- !u!64 &4037547041198258045
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1271675531259292522}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!1 &1738448118498689747
 GameObject:
   m_ObjectHideFlags: 0
@@ -1758,7 +1688,6 @@ GameObject:
   - component: {fileID: 3089933933290640630}
   - component: {fileID: 2902201746427704255}
   - component: {fileID: 406806699669430703}
-  - component: {fileID: 2835061746535459964}
   m_Layer: 0
   m_Name: carpa (1)
   m_TagString: Untagged
@@ -1774,12 +1703,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1738448118498689747}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0.43216446, w: 0.9017949}
-  m_LocalPosition: {x: 0.512, y: -0.572, z: 1.7084045}
+  m_LocalRotation: {x: -0, y: -0, z: -0.000000029802315, w: 1}
+  m_LocalPosition: {x: -0.008369446, y: 0.77672285, z: 1.6937561}
   m_LocalScale: {x: 0.49999994, y: 1, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7358336682895095462}
+  m_Father: {fileID: 5093447160529321539}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5926295010612409447
 MonoBehaviour:
@@ -2399,26 +2328,4 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1738448118498689747}
-  m_Mesh: {fileID: 0}
---- !u!64 &2835061746535459964
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1738448118498689747}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
   m_Mesh: {fileID: 0}

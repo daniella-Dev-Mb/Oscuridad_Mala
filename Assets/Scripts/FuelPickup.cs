@@ -14,14 +14,15 @@ public class FuelPickup : MonoBehaviour
         body.useGravity = false;
     }
 
-    void OnTriggerEnter(Collider other)
+    public bool TryCollect(PlayerController player)
     {
-        PlayerController player = other.GetComponentInParent<PlayerController>();
         if (!collected && player != null && player.AddFuel(fuelSeconds))
         {
             collected = true;
             gameObject.SetActive(false);
             Destroy(gameObject);
+            return true;
         }
+        return false;
     }
 }
