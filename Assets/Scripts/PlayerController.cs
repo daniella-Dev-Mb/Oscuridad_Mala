@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -160,6 +161,8 @@ public class PlayerController : MonoBehaviour
             timeScaleBeforeDefeat = Time.timeScale;
             Time.timeScale = 0f;
             gameObject.SetActive(false);
+
+            SceneManager.LoadScene("LoseScene");
         }
     }
 
