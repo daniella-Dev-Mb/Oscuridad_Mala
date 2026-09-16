@@ -8,9 +8,8 @@ public class MenuManager : MonoBehaviour
         SceneManager.LoadScene("Juego");
     }
 
-    public void Salir()
+    public void Menu()
     {
-        Debug.Log("Saliendo del juego...");
-        Application.Quit();
+        SceneManager.LoadScene("MainMenu");
     }
 }
