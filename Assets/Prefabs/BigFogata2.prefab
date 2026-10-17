@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 640478340547899351}
   - component: {fileID: 4701438536352546971}
   - component: {fileID: 1670239012434405997}
+  - component: {fileID: 2462646741470853661}
   m_Layer: 0
   m_Name: luz
   m_TagString: Untagged
@@ -127,6 +128,22 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
+--- !u!114 &2462646741470853661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2203143411700850178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7477de88184222642a60f87c78509924, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FireLightFlicker
+  fireLight: {fileID: 4701438536352546971}
+  minIntensity: 1.5
+  maxIntensity: 4
+  flickerSpeed: 5
 --- !u!1 &7209474754431907108
 GameObject:
   m_ObjectHideFlags: 0
