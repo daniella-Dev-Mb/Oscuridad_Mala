@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class AudioTrigger : MonoBehaviour
+public class BushAudioTrigger : MonoBehaviour
 {
 
     public BushAudioClips bushAudio;
@@ -10,6 +10,8 @@ public class AudioTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             bushAudio.PlayRandomSound();
+
+            gameObject.SetActive(false);
         }
     }
 
