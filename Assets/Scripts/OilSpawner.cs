@@ -11,6 +11,7 @@ public class OilSpawner : MonoBehaviour
     {
         int random = Random.Range(0,oilBottles.Count);
         Instantiate(oilBottles[random], transform.position, transform.rotation);
+        
     }
 
 }
