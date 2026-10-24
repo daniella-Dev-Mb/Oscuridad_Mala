@@ -9,11 +9,11 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 872e44626f655f34b920392d03a35111
   - enabled: 1
-    path: Assets/Scenes/Juego_PIOLA.unity
-    guid: 78a63bb5f293cf346ad3c55614a1970c
+    path: Assets/Scenes/TransitionScene.unity
+    guid: 849fedfa095eab441b18298e206c4fc0
   - enabled: 1
-    path: Assets/Scenes/Juego_ROTO.unity
-    guid: feb989f5ffc903042b690ded067e186e
+    path: Assets/Scenes/Juego.unity
+    guid: 78a63bb5f293cf346ad3c55614a1970c
   - enabled: 1
     path: Assets/Scenes/WinScene.unity
     guid: a134c3eecd85a0c44a7517cc33aed223
