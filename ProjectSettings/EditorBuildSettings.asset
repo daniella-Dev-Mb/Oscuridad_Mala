@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 872e44626f655f34b920392d03a35111
   - enabled: 1
+    path: Assets/Scenes/Juego_recuperacion_upstream.unity
+    guid: 78a63bb5f293cf346ad3c55614a1970c
+  - enabled: 1
     path: Assets/Scenes/Juego.unity
     guid: feb989f5ffc903042b690ded067e186e
   - enabled: 1
