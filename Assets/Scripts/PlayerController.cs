@@ -17,8 +17,12 @@ public class PlayerController : MonoBehaviour
     public float lanternIntensity = 3f;
     public Color lanternColor = new Color(1f, 0.4f, 0.08f);
     [Min(0f)] public float lanternDuration = 60f;
-    public Rect lanternHudRect = new Rect(20f, 20f, 200f, 24f);
     public string lanternHudLabel = "Linterna";
+
+    public float LanternCharge => lanternCharge;
+    public FuelPickup NearbyFuel => nearbyFuel;
+    public Camera PlayerCamera => playerCamera;
+    public bool IsDefeated => defeated;
 
     CharacterController characterController;
     Camera playerCamera;
@@ -29,7 +33,6 @@ public class PlayerController : MonoBehaviour
     [Min(0f)] public float interactionDistance = 2f;
     public float interactionHeight = 0.4f;
     FuelPickup nearbyFuel;
-    GUIStyle pickupPromptStyle;
     float verticalSpeed;
     bool isRunning;
     float lanternCharge = 1f;
@@ -164,45 +167,6 @@ public class PlayerController : MonoBehaviour
 
             SceneManager.LoadScene("LoseScene");
         }
-    }
-
-    void OnGUI()
-    {
-        if (lantern == null)
-        {
-            return;
-        }
-
-        GUI.Box(lanternHudRect, GUIContent.none);
-        Rect fill = lanternHudRect;
-        fill.width *= lanternCharge;
-        Color previousColor = GUI.color;
-        GUI.color = lanternColor;
-        GUI.DrawTexture(fill, Texture2D.whiteTexture);
-        GUI.color = previousColor;
-        GUI.Label(lanternHudRect, lanternHudLabel);
-        DrawPickupPrompt();
-    }
-
-    void DrawPickupPrompt()
-    {
-        if (nearbyFuel == null || playerCamera == null || defeated || Time.timeScale <= 0f)
-            return;
-
-        Vector3 screen = playerCamera.WorldToScreenPoint(nearbyFuel.transform.position + Vector3.up);
-        if (screen.z <= 0f || screen.x < 0f || screen.x > Screen.width ||
-            screen.y < 0f || screen.y > Screen.height) return;
-
-        if (pickupPromptStyle == null)
-        {
-            pickupPromptStyle = new GUIStyle(GUI.skin.box);
-            pickupPromptStyle.alignment = TextAnchor.MiddleCenter;
-            pickupPromptStyle.fontSize = 16;
-            pickupPromptStyle.normal.textColor = Color.white;
-        }
-        string message = lanternCharge >= 1f ? "Linterna llena" : "Pulsa E para agarrar";
-        GUI.Box(new Rect(screen.x - 100f, Screen.height - screen.y - 36f, 200f, 32f),
-            message, pickupPromptStyle);
     }
 
     public bool AddFuel(float seconds)
