@@ -54,6 +54,41 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Branch_T_01
     second: {fileID: 2100000, guid: a1ff65f613374f149b13e7d0f91a1510, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Grass_P_01
+    second: {fileID: 2100000, guid: bd8121f2b1f350943b3f05ae6023adf1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rock_01_V
+    second: {fileID: 2100000, guid: 010c7345fd96f9242897c53baa062084, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rock_07_V
+    second: {fileID: 2100000, guid: c08c62c1bff26de4781d3207d212c2ec, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rock_09_V
+    second: {fileID: 2100000, guid: f18687864c9f39540ae55b6e58285c48, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rock_10
+    second: {fileID: 2100000, guid: 5051916f44d124344bec472ec93d1cc2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rock_10_V
+    second: {fileID: 2100000, guid: 896d53aee7afd8141a2ef81c89e89fad, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tree_B
+    second: {fileID: 2100000, guid: 87d54943fa5212a4dbed721915385178, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
