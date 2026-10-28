@@ -3,7 +3,7 @@ using UnityEngine;
 public class SaveZone : MonoBehaviour
 {
     [SerializeField] private Transform player;
-    protected float zone = 5.0f;
+   [SerializeField] protected float zone = 5.0f;
     private PlayerController controller;
     private bool detectPlayer;
 
