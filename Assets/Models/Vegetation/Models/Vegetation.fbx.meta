@@ -7,6 +7,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Ammunition
+    second: {fileID: 2100000, guid: 4051bfee406a7354ca067429426f1f0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: BarkDecidious
     second: {fileID: 2100000, guid: 225594720f58dfe46a0b43533192961d, type: 2}
   - first:

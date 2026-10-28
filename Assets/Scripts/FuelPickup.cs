@@ -3,7 +3,7 @@ using UnityEngine;
 [RequireComponent(typeof(SphereCollider), typeof(Rigidbody))]
 public class FuelPickup : MonoBehaviour
 {
-    [Min(0f)] public float fuelSeconds = 30f;
+    [Min(1)] public int cantidad = 1;
     bool collected;
 
     void Awake()
@@ -16,7 +16,7 @@ public class FuelPickup : MonoBehaviour
 
     public bool TryCollect(PlayerController player)
     {
-        if (!collected && player != null && player.AddFuel(fuelSeconds))
+        if (!collected && player != null && player.AddFuel(cantidad))
         {
             collected = true;
             gameObject.SetActive(false);
