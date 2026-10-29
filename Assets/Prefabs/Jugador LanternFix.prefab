@@ -2946,6 +2946,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb5bda1acbc8423aa124eedddc205ccf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+  pilas: 0
   inputActions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   walkSpeed: 4
   runSpeed: 6
@@ -2978,11 +2979,11 @@ MonoBehaviour:
   lanternSource: {fileID: 4807359655458768778}
   ignitionSource: {fileID: 5133487998883158654}
   footsteps:
-  - {fileID: 8300000, guid: 13ca92e42d489a54f8cd342ba2f49d68, type: 3}
-  - {fileID: 8300000, guid: 3915e967937bb8c4e8ce2f35bbf75b12, type: 3}
-  - {fileID: 8300000, guid: 35913b51cfafc364cad3f4b8cbaa2808, type: 3}
-  - {fileID: 8300000, guid: ea17b6be8eff7a14b83192ba7a84021f, type: 3}
+  - {fileID: 8300000, guid: 23d759770aa3ac14bbb872c6286282a7, type: 3}
+  - {fileID: 8300000, guid: 9f56c5c96148b474bbbcbe90ea4057f3, type: 3}
   ignitionClip: {fileID: 8300000, guid: 38d75f6dfc10f7648ba42fa19379ec79, type: 3}
+  refillClip: {fileID: 8300000, guid: bc693f01da42de54ca16f6c3452259ff, type: 3}
+  extinguishClip: {fileID: 0}
   walkStepDistance: 1.8
   runStepDistance: 2.2
   minimumSpeed: 0.1

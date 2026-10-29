@@ -22,6 +22,8 @@ public class PlayerController : MonoBehaviour
 
     public float LanternCharge => lanternCharge;
     public FuelPickup NearbyFuel => nearbyFuel;
+    public Component NearbyObject { get; private set; }
+    public string InteractionMessage { get; private set; }
     public Camera PlayerCamera => playerCamera;
     public bool IsDefeated => defeated;
 
@@ -103,44 +105,52 @@ public class PlayerController : MonoBehaviour
         }
         MovePlayer();
         UpdateAnimation();
-        nearbyFuel = FindNearbyFuel();
-        if (Time.deltaTime > 0f && nearbyFuel != null && interactAction.WasPressedThisFrame())
+        FindNearbyObject();
+        if (Time.deltaTime > 0f && interactAction.WasPressedThisFrame())
         {
-            if (nearbyFuel.TryCollect(this)) nearbyFuel = null;
+            if (NearbyObject is FuelPickup fuel) fuel.TryCollect(this);
+            else if (NearbyObject is PilasPickUp battery) battery.TryCollect(this);
+            else if (NearbyObject is Radio radio) radio.Interact(this);
         }
     }
 
-    FuelPickup FindNearbyFuel()
+    void FindNearbyObject()
     {
+        NearbyObject = null;
+        nearbyFuel = null;
+        InteractionMessage = "";
         Vector3 origin = transform.position + Vector3.up * interactionHeight;
-        Collider[] nearby = Physics.OverlapSphere(origin, interactionDistance,
-            Physics.DefaultRaycastLayers, QueryTriggerInteraction.Collide);
-        float nearestDistance = float.PositiveInfinity;
-        FuelPickup target = null;
-        foreach (Collider candidate in nearby)
+        float nearest = interactionDistance;
+        foreach (Collider candidate in Physics.OverlapSphere(origin, interactionDistance,
+            Physics.DefaultRaycastLayers, QueryTriggerInteraction.Collide))
         {
-            FuelPickup pickup = candidate.GetComponentInParent<FuelPickup>();
-            if (pickup == null || !pickup.isActiveAndEnabled) continue;
-            Vector3 destination = pickup.transform.position + Vector3.up * interactionHeight;
+            Component target = candidate.GetComponentInParent<FuelPickup>();
+            if (target == null) target = candidate.GetComponentInParent<PilasPickUp>();
+            if (target == null) target = candidate.GetComponentInParent<Radio>();
+            if (target == null || !((Behaviour)target).isActiveAndEnabled) continue;
+            Vector3 destination = target.transform.position + Vector3.up * interactionHeight;
             float distance = Vector3.Distance(origin, destination);
-            if (distance <= interactionDistance && distance < nearestDistance && CanReachFuel(origin, destination, pickup))
-            {
-                nearestDistance = distance;
-                target = pickup;
-            }
+            if (distance > nearest || !CanReachObject(origin, destination, target)) continue;
+            nearest = distance;
+            NearbyObject = target;
         }
-        return target;
+        if (NearbyObject is FuelPickup fuel)
+        {
+            nearbyFuel = fuel;
+            InteractionMessage = LanternCharge >= 1f ? "Linterna llena" : "E: recoger combustible";
+        }
+        else if (NearbyObject is PilasPickUp) InteractionMessage = "E: recoger pilas";
+        else if (NearbyObject is Radio radio) InteractionMessage = radio.GetMessage(this);
     }
 
-    bool CanReachFuel(Vector3 origin, Vector3 destination, FuelPickup pickup)
+    bool CanReachObject(Vector3 origin, Vector3 destination, Component target)
     {
         Vector3 direction = destination - origin;
-        RaycastHit[] hits = Physics.RaycastAll(origin, direction.normalized, direction.magnitude,
-            Physics.DefaultRaycastLayers, QueryTriggerInteraction.Ignore);
-        foreach (RaycastHit hit in hits)
+        foreach (RaycastHit hit in Physics.RaycastAll(origin, direction.normalized, direction.magnitude,
+            Physics.DefaultRaycastLayers, QueryTriggerInteraction.Ignore))
         {
             if (hit.collider.transform.IsChildOf(transform)) continue;
-            if (hit.collider.GetComponentInParent<FuelPickup>() == pickup) continue;
+            if (hit.collider.transform.IsChildOf(target.transform)) continue;
             return false;
         }
         return true;
@@ -160,6 +170,7 @@ public class PlayerController : MonoBehaviour
 
         if (lanternCharge <= 0f)
         {
+            GetComponent<PlayerAudio>()?.PlayExtinguish();
             ///////////placeholder
             defeated = true;
             timeScaleBeforeDefeat = Time.timeScale;
@@ -179,6 +190,7 @@ public class PlayerController : MonoBehaviour
 
         lanternCharge = Mathf.Clamp01(lanternCharge + seconds / lanternDuration);
         lantern.intensity = Mathf.Max(0f, lanternIntensity) * lanternCharge;
+        GetComponent<PlayerAudio>()?.PlayRefill();
         return true;
     }
 

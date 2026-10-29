@@ -32,9 +32,9 @@ public class LanternHud : MonoBehaviour
         chargeFill.rectTransform.SetSizeWithCurrentAnchors(
             RectTransform.Axis.Horizontal, fullBarWidth * Mathf.Clamp01(player.LanternCharge));
         chargeFill.color = player.lanternColor;
-        chargeLabel.text = $"{player.lanternHudLabel}  {player.LanternCharge:P0}";
+        chargeLabel.text = $"{player.lanternHudLabel}  {player.LanternCharge:P0} | Pilas: {player.pilas}";
 
-        FuelPickup fuel = player.NearbyFuel;
+        Component fuel = player.NearbyObject;
         Camera camera = player.PlayerCamera;
         bool showPrompt = fuel != null && camera != null && Time.timeScale > 0f;
         pickupPrompt.gameObject.SetActive(showPrompt);
@@ -49,6 +49,6 @@ public class LanternHud : MonoBehaviour
         RectTransformUtility.ScreenPointToLocalPointInRectangle(
             (RectTransform)hudCanvas.transform, screen, null, out Vector2 position);
         pickupPrompt.anchoredPosition = position;
-        pickupLabel.text = player.LanternCharge >= 1f ? fullMessage : collectMessage;
+        pickupLabel.text = player.InteractionMessage;
     }
 }

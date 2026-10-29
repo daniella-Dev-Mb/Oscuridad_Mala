@@ -8,6 +8,29 @@ public class PlayerAudio : MonoBehaviour
     public AudioSource ignitionSource;
     public AudioClip[] footsteps;
     public AudioClip ignitionClip;
+    public AudioClip refillClip;
+    ///////////placeholder
+    public AudioClip extinguishClip; // Asignar el soplido cuando esté disponible.
+
+    public void PlayRefill()
+    {
+        if (ignitionSource != null && refillClip != null) ignitionSource.PlayOneShot(refillClip);
+    }
+
+    public void PlayExtinguish()
+    {
+        // El sonido debe terminar aunque desaparezca el jugador y cambie la escena.
+        if (extinguishClip == null) return;
+        GameObject sound = new GameObject("Apagado linterna");
+        AudioSource source = sound.AddComponent<AudioSource>();
+        if (ignitionSource != null) source.outputAudioMixerGroup = ignitionSource.outputAudioMixerGroup;
+        source.clip = extinguishClip;
+        source.spatialBlend = 0f;
+        DontDestroyOnLoad(sound);
+        source.Play();
+        Destroy(sound, extinguishClip.length);
+    }
+
     [Min(0.01f)] public float walkStepDistance = 1.8f;
     [Min(0.01f)] public float runStepDistance = 2.2f;
     [Min(0f)] public float minimumSpeed = 0.1f;
