@@ -1819,11 +1819,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7880623232024931902, guid: a7decef668609a0429945e0fe4c186ba, type: 3}
       propertyPath: m_SelectedEdges.Array.size
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7880623232024931902, guid: a7decef668609a0429945e0fe4c186ba, type: 3}
       propertyPath: m_SelectedFaces.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7880623232024931902, guid: a7decef668609a0429945e0fe4c186ba, type: 3}
       propertyPath: m_Tangents.Array.data[0].x
@@ -3067,7 +3067,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7880623232024931902, guid: a7decef668609a0429945e0fe4c186ba, type: 3}
       propertyPath: m_SelectedVertices.Array.size
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7880623232024931902, guid: a7decef668609a0429945e0fe4c186ba, type: 3}
       propertyPath: m_SelectedEdges.Array.data[0].a
@@ -3767,15 +3767,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8115841413246494558, guid: a7decef668609a0429945e0fe4c186ba, type: 3}
       propertyPath: m_SelectedEdges.Array.size
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8115841413246494558, guid: a7decef668609a0429945e0fe4c186ba, type: 3}
       propertyPath: m_SelectedFaces.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8115841413246494558, guid: a7decef668609a0429945e0fe4c186ba, type: 3}
       propertyPath: m_SelectedVertices.Array.size
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8805448234436445548, guid: a7decef668609a0429945e0fe4c186ba, type: 3}
       propertyPath: m_VersionIndex
@@ -3793,7 +3793,9 @@ PrefabInstance:
       propertyPath: m_VersionIndex
       value: 12527
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2695804118197355912, guid: a7decef668609a0429945e0fe4c186ba, type: 3}
+    - {fileID: 8328719123712661155, guid: a7decef668609a0429945e0fe4c186ba, type: 3}
     m_RemovedGameObjects:
     - {fileID: 1679188664210381793, guid: a7decef668609a0429945e0fe4c186ba, type: 3}
     - {fileID: 1215930974254800504, guid: a7decef668609a0429945e0fe4c186ba, type: 3}
