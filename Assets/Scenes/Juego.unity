@@ -195405,8 +195405,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 643489884}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.083252445, y: 3.5292574e-10, z: -2.9484287e-11, w: 0.9965285}
-  m_LocalPosition: {x: 321.2, y: 5.6904483, z: 125.05}
+  m_LocalRotation: {x: 0.12218327, y: 0.000000029579034, z: -0.0000000036413461, w: 0.9925076}
+  m_LocalPosition: {x: 321.223, y: 5.8744197, z: 124.981}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -288504,22 +288504,22 @@ MonoBehaviour:
   TargetOffset: {x: 0, y: 0, z: 0}
   TrackerSettings:
     BindingMode: 3
-    PositionDamping: {x: 1, y: 1, z: 1}
+    PositionDamping: {x: 1.5, y: 1.5, z: 1.5}
     AngularDampingMode: 0
-    RotationDamping: {x: 1, y: 1, z: 1}
+    RotationDamping: {x: 1.5, y: 1.5, z: 1.5}
     QuaternionDamping: 1
   OrbitStyle: 1
   Radius: 5
   Orbits:
     Top:
       Radius: 2
-      Height: 1.5
+      Height: 1
     Center:
       Radius: 2
-      Height: 1
+      Height: 0.5
     Bottom:
       Radius: 2
-      Height: 0.1
+      Height: 0.5
     SplineCurvature: 0
   RecenteringTarget: 2
   HorizontalAxis:
@@ -288533,9 +288533,9 @@ MonoBehaviour:
       Time: 2
     Restrictions: 0
   VerticalAxis:
-    Value: 2.5
-    Center: 2.5
-    Range: {x: 0, y: 25}
+    Value: 0
+    Center: 0
+    Range: {x: -60, y: 60}
     Wrap: 0
     Recentering:
       Enabled: 1
@@ -288603,8 +288603,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 944738939}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.083252445, y: 3.5292577e-10, z: -2.948429e-11, w: 0.9965285}
-  m_LocalPosition: {x: 321.2, y: 5.6904483, z: 125.05}
+  m_LocalRotation: {x: 0.12218326, y: 0.000000029579034, z: -0.0000000036413454, w: 0.9925076}
+  m_LocalPosition: {x: 321.223, y: 5.8744197, z: 124.981}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -639264,11 +639264,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7618448686299273216, guid: 4217bc85820a8654d84099cb96c5ef1b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.2
+      value: 0.223
+      objectReference: {fileID: 0}
+    - target: {fileID: 7618448686299273216, guid: 4217bc85820a8654d84099cb96c5ef1b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.487
       objectReference: {fileID: 0}
     - target: {fileID: 7618448686299273216, guid: 4217bc85820a8654d84099cb96c5ef1b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.069
       objectReference: {fileID: 0}
     - target: {fileID: 8378360008797131859, guid: 4217bc85820a8654d84099cb96c5ef1b, type: 3}
       propertyPath: m_LocalPosition.x
