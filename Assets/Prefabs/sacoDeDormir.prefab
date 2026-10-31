@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8798857475849897883}
   - component: {fileID: 8868530973058404262}
   - component: {fileID: 2026421007801264428}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: sacoDeDormir
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1499,7 +1499,7 @@ GameObject:
   - component: {fileID: 8800572295355368567}
   - component: {fileID: 4960117668606243910}
   - component: {fileID: 1509408888040472375}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3774,7 +3774,7 @@ GameObject:
   - component: {fileID: 4717844349594970781}
   - component: {fileID: 7811528696865108007}
   - component: {fileID: 7037105164814609078}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
