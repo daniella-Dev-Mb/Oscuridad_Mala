@@ -173,7 +173,6 @@ GameObject:
   - component: {fileID: 9214517125167251}
   - component: {fileID: 2295025569715410310}
   - component: {fileID: 6281176736314885389}
-  - component: {fileID: 4018161964484778646}
   m_Layer: 7
   m_Name: fogataRami
   m_TagString: Untagged
@@ -191,7 +190,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 60.74, y: 0.139, z: 130.54454}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.59, y: 0.76, z: 0.75}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8982640768312458093}
@@ -242,7 +241,7 @@ AudioSource:
   m_GameObject: {fileID: 6704374742800645471}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 9189646636409895987, guid: e5c44e8ebd687a34ebf44fe1db4b5a57, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: d62531535f3f14c4ebc76b2d087454a0, type: 3}
   m_PlayOnAwake: 1
@@ -348,130 +347,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!82 &4018161964484778646
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6704374742800645471}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: d62531535f3f14c4ebc76b2d087454a0, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 1
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 0
-  MinDistance: 3.5
-  MaxDistance: 16.5
-  Pan2D: 0
-  rolloffMode: 2
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0.23333333
-      value: 1
-      inSlope: -4.2874284
-      outSlope: -4.2874284
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 0.35395
-      value: 0.62571716
-      inSlope: -1.0718571
-      outSlope: -1.0718571
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 0.5780571
-      value: 0.3342855
-      inSlope: -0.5246788
-      outSlope: -0.5246788
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.8175649
-      value: 0.11979675
-      inSlope: -0.26796427
-      outSlope: -0.26796427
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: -0.23342669
-      outSlope: -0.23342669
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1001 &9086487800100061157
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -490,11 +365,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 6bfffc0961983c946846495095b15718, type: 2}
     - target: {fileID: 568025589256839564, guid: 1ce590ebafa18b84eafb83af1f3d05af, type: 3}
       propertyPath: m_VersionIndex
-      value: 1329
+      value: 1332
       objectReference: {fileID: 0}
     - target: {fileID: 948957724317288979, guid: 1ce590ebafa18b84eafb83af1f3d05af, type: 3}
       propertyPath: m_VersionIndex
-      value: 1329
+      value: 1332
       objectReference: {fileID: 0}
     - target: {fileID: 1763014542971779072, guid: 1ce590ebafa18b84eafb83af1f3d05af, type: 3}
       propertyPath: m_Layer
@@ -502,7 +377,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1766439886097693633, guid: 1ce590ebafa18b84eafb83af1f3d05af, type: 3}
       propertyPath: m_VersionIndex
-      value: 1329
+      value: 1332
       objectReference: {fileID: 0}
     - target: {fileID: 2115294280905321174, guid: 1ce590ebafa18b84eafb83af1f3d05af, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -526,7 +401,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2557262302599947654, guid: 1ce590ebafa18b84eafb83af1f3d05af, type: 3}
       propertyPath: m_VersionIndex
-      value: 1252
+      value: 1255
       objectReference: {fileID: 0}
     - target: {fileID: 2714343814234062781, guid: 1ce590ebafa18b84eafb83af1f3d05af, type: 3}
       propertyPath: m_Layer
@@ -534,7 +409,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2901039712763560719, guid: 1ce590ebafa18b84eafb83af1f3d05af, type: 3}
       propertyPath: m_VersionIndex
-      value: 1252
+      value: 1255
       objectReference: {fileID: 0}
     - target: {fileID: 3185149211701777109, guid: 1ce590ebafa18b84eafb83af1f3d05af, type: 3}
       propertyPath: m_LocalPosition.x
@@ -578,15 +453,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3244067632946491632, guid: 1ce590ebafa18b84eafb83af1f3d05af, type: 3}
       propertyPath: m_VersionIndex
-      value: 1329
+      value: 1332
       objectReference: {fileID: 0}
     - target: {fileID: 3309001052580811622, guid: 1ce590ebafa18b84eafb83af1f3d05af, type: 3}
       propertyPath: m_VersionIndex
-      value: 1329
+      value: 1332
       objectReference: {fileID: 0}
     - target: {fileID: 3547859868053174378, guid: 1ce590ebafa18b84eafb83af1f3d05af, type: 3}
       propertyPath: m_VersionIndex
-      value: 1329
+      value: 1332
       objectReference: {fileID: 0}
     - target: {fileID: 3996024984976065571, guid: 1ce590ebafa18b84eafb83af1f3d05af, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -614,7 +489,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 7525cd3c2aa08e54581455d9aaf78b84, type: 2}
     - target: {fileID: 4972029705205644095, guid: 1ce590ebafa18b84eafb83af1f3d05af, type: 3}
       propertyPath: m_VersionIndex
-      value: 1329
+      value: 1332
       objectReference: {fileID: 0}
     - target: {fileID: 5038741699522866862, guid: 1ce590ebafa18b84eafb83af1f3d05af, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -626,7 +501,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5384536448684918737, guid: 1ce590ebafa18b84eafb83af1f3d05af, type: 3}
       propertyPath: m_VersionIndex
-      value: 1329
+      value: 1332
       objectReference: {fileID: 0}
     - target: {fileID: 5619786489623899205, guid: 1ce590ebafa18b84eafb83af1f3d05af, type: 3}
       propertyPath: m_Layer
@@ -638,11 +513,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6158187352258734948, guid: 1ce590ebafa18b84eafb83af1f3d05af, type: 3}
       propertyPath: m_VersionIndex
-      value: 1252
+      value: 1255
       objectReference: {fileID: 0}
     - target: {fileID: 7095213799867149076, guid: 1ce590ebafa18b84eafb83af1f3d05af, type: 3}
       propertyPath: m_VersionIndex
-      value: 1252
+      value: 1255
       objectReference: {fileID: 0}
     - target: {fileID: 7373173925319336113, guid: 1ce590ebafa18b84eafb83af1f3d05af, type: 3}
       propertyPath: m_Layer
