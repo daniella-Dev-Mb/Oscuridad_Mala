@@ -10,7 +10,7 @@ public class PlayerAudio : MonoBehaviour
     public AudioClip ignitionClip;
     public AudioClip refillClip;
     ///////////placeholder
-    public AudioClip extinguishClip; // Asignar el soplido cuando esté disponible.
+    public AudioClip extinguishClip;
 
     public void PlayRefill()
     {
@@ -19,7 +19,6 @@ public class PlayerAudio : MonoBehaviour
 
     public void PlayExtinguish()
     {
-        // El sonido debe terminar aunque desaparezca el jugador y cambie la escena.
         if (extinguishClip == null) return;
         GameObject sound = new GameObject("Apagado linterna");
         AudioSource source = sound.AddComponent<AudioSource>();
@@ -82,7 +81,6 @@ public class PlayerAudio : MonoBehaviour
         }
         if (footstepsSource == null || footsteps == null || footsteps.Length == 0) return;
 
-        // Volumen y tono responden a la velocidad real, incluso si el jugador choca con una pared.
         float running = Mathf.InverseLerp(player.walkSpeed, player.runSpeed, speed);
         travelled += speed * Time.deltaTime;
         float stepDistance = Mathf.Max(0.01f, Mathf.Lerp(walkStepDistance, runStepDistance, running));

@@ -177,6 +177,7 @@ Transform:
   m_Children:
   - {fileID: 8982640768312458093}
   - {fileID: 5920646734676749616}
+  - {fileID: 8215914205833012171}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &9214517125167251
@@ -214,6 +215,68 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.395359, y: 1.0172592, z: 1.325882}
   m_Center: {x: -0.013566971, y: 0.3586753, z: 0.021492004}
+--- !u!1001 &8373841805706456150
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2695317369674839047}
+    m_Modifications:
+    - target: {fileID: 446162790868176797, guid: 932ac0855569f9f4aa17f15a0e922471, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 446162790868176797, guid: 932ac0855569f9f4aa17f15a0e922471, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 446162790868176797, guid: 932ac0855569f9f4aa17f15a0e922471, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 446162790868176797, guid: 932ac0855569f9f4aa17f15a0e922471, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 446162790868176797, guid: 932ac0855569f9f4aa17f15a0e922471, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 446162790868176797, guid: 932ac0855569f9f4aa17f15a0e922471, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 446162790868176797, guid: 932ac0855569f9f4aa17f15a0e922471, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 446162790868176797, guid: 932ac0855569f9f4aa17f15a0e922471, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 446162790868176797, guid: 932ac0855569f9f4aa17f15a0e922471, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 446162790868176797, guid: 932ac0855569f9f4aa17f15a0e922471, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5644395788404789593, guid: 932ac0855569f9f4aa17f15a0e922471, type: 3}
+      propertyPath: m_Name
+      value: Fuego fogata
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 932ac0855569f9f4aa17f15a0e922471, type: 3}
+--- !u!4 &8215914205833012171 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 446162790868176797, guid: 932ac0855569f9f4aa17f15a0e922471, type: 3}
+  m_PrefabInstance: {fileID: 8373841805706456150}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &9086487800100061157
 PrefabInstance:
   m_ObjectHideFlags: 0

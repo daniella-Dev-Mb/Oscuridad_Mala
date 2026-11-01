@@ -254,9 +254,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Radio
   source: {fileID: 5549817577033471377}
   buttonSource: {fileID: 6309998998552193089}
-  initialClip: {fileID: 0}
+  initialClip: {fileID: 8300000, guid: c09c0b8e25b95b644acedb0fccc7fb03, type: 3}
   changedClip: {fileID: 0}
-  buttonClip: {fileID: 0}
+  buttonClip: {fileID: 8300000, guid: 197f07ee455029a42a0dec99e91a9655, type: 3}
+  channels:
+  - {fileID: 8300000, guid: d42ccd98bac76ee43ac47b6f774dc5e8, type: 3}
+  - {fileID: 8300000, guid: f52e0af67985ec04e9134041febf24b7, type: 3}
 --- !u!135 &912143758805662195
 SphereCollider:
   m_ObjectHideFlags: 0

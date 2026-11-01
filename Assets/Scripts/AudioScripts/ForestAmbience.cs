@@ -19,7 +19,6 @@ public class ForestAmbience : MonoBehaviour
             introSource.clip = introClip;
             introSource.loop = false;
             introSource.PlayScheduled(start);
-            // El reloj de audio evita un silencio entre la entrada con fade y el bucle.
             start += (double)introClip.samples / introClip.frequency;
         }
         loopSource.PlayScheduled(start);
