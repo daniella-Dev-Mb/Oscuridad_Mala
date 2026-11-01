@@ -6,7 +6,7 @@ public class BirdsTriggerZone : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.GetComponentInParent<PlayerController>() != null)
         {
             bushAudio.PlayRandomSound();
 

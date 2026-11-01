@@ -3,9 +3,8 @@ using UnityEngine;
 [RequireComponent(typeof(SphereCollider), typeof(Rigidbody))]
 public class PilasPickUp : MonoBehaviour
 {
-    [Min(0f)] public float fuelSeconds = 30f;
     bool collected;
-    public int pilas = 0;
+    [Min(1)] public int pilas = 1;
     void Awake()
     {
         GetComponent<SphereCollider>().isTrigger = true;
@@ -18,12 +17,11 @@ public class PilasPickUp : MonoBehaviour
     {
         if (collected || player == null) return false;
         {
-            player.pilas += pilas;
+            player.pilas += Mathf.Max(1, pilas);
             collected = true;
             gameObject.SetActive(false);
             Destroy(gameObject);
             return true;
         }
-        return false;
     }
 }

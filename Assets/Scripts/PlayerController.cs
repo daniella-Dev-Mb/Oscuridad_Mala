@@ -18,8 +18,14 @@ public class PlayerController : MonoBehaviour
     public float lanternIntensity = 3f;
     public Color lanternColor = new Color(1f, 0.4f, 0.08f);
     [Min(0f)] public float lanternDuration = 60f;
-    public Rect lanternHudRect = new Rect(20f, 20f, 200f, 24f);
     public string lanternHudLabel = "Linterna";
+
+    public float LanternCharge => lanternCharge;
+    public FuelPickup NearbyFuel => nearbyFuel;
+    public Component NearbyObject { get; private set; }
+    public string InteractionMessage { get; private set; }
+    public Camera PlayerCamera => playerCamera;
+    public bool IsDefeated => defeated;
 
     CharacterController characterController;
     Camera playerCamera;
@@ -30,7 +36,6 @@ public class PlayerController : MonoBehaviour
     [Min(0f)] public float interactionDistance = 2f;
     public float interactionHeight = 0.4f;
     FuelPickup nearbyFuel;
-    GUIStyle pickupPromptStyle;
     float verticalSpeed;
     bool isRunning;
     float lanternCharge = 1f;
@@ -100,44 +105,52 @@ public class PlayerController : MonoBehaviour
         }
         MovePlayer();
         UpdateAnimation();
-        nearbyFuel = FindNearbyFuel();
-        if (Time.deltaTime > 0f && nearbyFuel != null && interactAction.WasPressedThisFrame())
+        FindNearbyObject();
+        if (Time.deltaTime > 0f && interactAction.WasPressedThisFrame())
         {
-            if (nearbyFuel.TryCollect(this)) nearbyFuel = null;
+            if (NearbyObject is FuelPickup fuel) fuel.TryCollect(this);
+            else if (NearbyObject is PilasPickUp battery) battery.TryCollect(this);
+            else if (NearbyObject is Radio radio) radio.Interact(this);
         }
     }
 
-    FuelPickup FindNearbyFuel()
+    void FindNearbyObject()
     {
+        NearbyObject = null;
+        nearbyFuel = null;
+        InteractionMessage = "";
         Vector3 origin = transform.position + Vector3.up * interactionHeight;
-        Collider[] nearby = Physics.OverlapSphere(origin, interactionDistance,
-            Physics.DefaultRaycastLayers, QueryTriggerInteraction.Collide);
-        float nearestDistance = float.PositiveInfinity;
-        FuelPickup target = null;
-        foreach (Collider candidate in nearby)
+        float nearest = interactionDistance;
+        foreach (Collider candidate in Physics.OverlapSphere(origin, interactionDistance,
+            Physics.DefaultRaycastLayers, QueryTriggerInteraction.Collide))
         {
-            FuelPickup pickup = candidate.GetComponentInParent<FuelPickup>();
-            if (pickup == null || !pickup.isActiveAndEnabled) continue;
-            Vector3 destination = pickup.transform.position + Vector3.up * interactionHeight;
+            Component target = candidate.GetComponentInParent<FuelPickup>();
+            if (target == null) target = candidate.GetComponentInParent<PilasPickUp>();
+            if (target == null) target = candidate.GetComponentInParent<Radio>();
+            if (target == null || !((Behaviour)target).isActiveAndEnabled) continue;
+            Vector3 destination = target.transform.position + Vector3.up * interactionHeight;
             float distance = Vector3.Distance(origin, destination);
-            if (distance <= interactionDistance && distance < nearestDistance && CanReachFuel(origin, destination, pickup))
-            {
-                nearestDistance = distance;
-                target = pickup;
-            }
+            if (distance > nearest || !CanReachObject(origin, destination, target)) continue;
+            nearest = distance;
+            NearbyObject = target;
         }
-        return target;
+        if (NearbyObject is FuelPickup fuel)
+        {
+            nearbyFuel = fuel;
+            InteractionMessage = LanternCharge >= 1f ? "Linterna llena" : "E: recoger combustible";
+        }
+        else if (NearbyObject is PilasPickUp) InteractionMessage = "E: recoger pilas";
+        else if (NearbyObject is Radio radio) InteractionMessage = radio.GetMessage(this);
     }
 
-    bool CanReachFuel(Vector3 origin, Vector3 destination, FuelPickup pickup)
+    bool CanReachObject(Vector3 origin, Vector3 destination, Component target)
     {
         Vector3 direction = destination - origin;
-        RaycastHit[] hits = Physics.RaycastAll(origin, direction.normalized, direction.magnitude,
-            Physics.DefaultRaycastLayers, QueryTriggerInteraction.Ignore);
-        foreach (RaycastHit hit in hits)
+        foreach (RaycastHit hit in Physics.RaycastAll(origin, direction.normalized, direction.magnitude,
+            Physics.DefaultRaycastLayers, QueryTriggerInteraction.Ignore))
         {
             if (hit.collider.transform.IsChildOf(transform)) continue;
-            if (hit.collider.GetComponentInParent<FuelPickup>() == pickup) continue;
+            if (hit.collider.transform.IsChildOf(target.transform)) continue;
             return false;
         }
         return true;
@@ -157,6 +170,7 @@ public class PlayerController : MonoBehaviour
 
         if (lanternCharge <= 0f)
         {
+            GetComponent<PlayerAudio>()?.PlayExtinguish();
             ///////////placeholder
             defeated = true;
             timeScaleBeforeDefeat = Time.timeScale;
@@ -165,45 +179,6 @@ public class PlayerController : MonoBehaviour
 
             SceneManager.LoadScene("LoseScene");
         }
-    }
-
-    void OnGUI()
-    {
-        if (lantern == null)
-        {
-            return;
-        }
-
-        GUI.Box(lanternHudRect, GUIContent.none);
-        Rect fill = lanternHudRect;
-        fill.width *= lanternCharge;
-        Color previousColor = GUI.color;
-        GUI.color = lanternColor;
-        GUI.DrawTexture(fill, Texture2D.whiteTexture);
-        GUI.color = previousColor;
-        GUI.Label(lanternHudRect, lanternHudLabel);
-        DrawPickupPrompt();
-    }
-
-    void DrawPickupPrompt()
-    {
-        if (nearbyFuel == null || playerCamera == null || defeated || Time.timeScale <= 0f)
-            return;
-
-        Vector3 screen = playerCamera.WorldToScreenPoint(nearbyFuel.transform.position + Vector3.up);
-        if (screen.z <= 0f || screen.x < 0f || screen.x > Screen.width ||
-            screen.y < 0f || screen.y > Screen.height) return;
-
-        if (pickupPromptStyle == null)
-        {
-            pickupPromptStyle = new GUIStyle(GUI.skin.box);
-            pickupPromptStyle.alignment = TextAnchor.MiddleCenter;
-            pickupPromptStyle.fontSize = 16;
-            pickupPromptStyle.normal.textColor = Color.white;
-        }
-        string message = lanternCharge >= 1f ? "Linterna llena" : "Pulsa E para agarrar";
-        GUI.Box(new Rect(screen.x - 100f, Screen.height - screen.y - 36f, 200f, 32f),
-            message, pickupPromptStyle);
     }
 
     public bool AddFuel(float seconds)
@@ -215,6 +190,7 @@ public class PlayerController : MonoBehaviour
 
         lanternCharge = Mathf.Clamp01(lanternCharge + seconds / lanternDuration);
         lantern.intensity = Mathf.Max(0f, lanternIntensity) * lanternCharge;
+        GetComponent<PlayerAudio>()?.PlayRefill();
         return true;
     }
 
