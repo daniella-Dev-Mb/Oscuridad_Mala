@@ -58,6 +58,14 @@ AudioMixerController:
   m_MasterGroup: {fileID: 24300002}
   m_Snapshots:
   - {fileID: 24500006}
+<<<<<<< Updated upstream
+=======
+  - {fileID: -5461584334896841293}
+  - {fileID: -4395028133546960549}
+  - {fileID: 8543913113188242076}
+  - {fileID: -6512375383513355185}
+  - {fileID: -2577148817928918976}
+>>>>>>> Stashed changes
   m_StartSnapshot: {fileID: 24500006}
   m_SuspendThreshold: -80
   m_EnableSuspend: 1
@@ -72,7 +80,7 @@ AudioMixerController:
     - 409af3346a5fcd7488f3c07ee73618ee
     name: View
   m_CurrentViewIndex: 0
-  m_TargetSnapshot: {fileID: 24500006}
+  m_TargetSnapshot: {fileID: -5461584334896841293}
 --- !u!243 &24300002
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
