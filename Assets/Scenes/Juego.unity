@@ -376333,6 +376333,11 @@ Mesh:
       - serializedVersion: 1
         m_IndexStart: 0
         m_IndexCount: 0
+--- !u!108 &1265351403 stripped
+Light:
+  m_CorrespondingSourceObject: {fileID: 6509370279108745991, guid: 5ee650c3d81fdb44aa04874307f30530, type: 3}
+  m_PrefabInstance: {fileID: 8453392325034191144}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &1267116351
 Mesh:
   m_ObjectHideFlags: 0
@@ -635025,7 +635030,7 @@ PrefabInstance:
     - target: {fileID: 5925336508955528549, guid: 5ee650c3d81fdb44aa04874307f30530, type: 3}
       propertyPath: lantern
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1265351403}
     - target: {fileID: 5999664928201516565, guid: 5ee650c3d81fdb44aa04874307f30530, type: 3}
       propertyPath: m_LocalPosition.x
       value: 321
@@ -635207,6 +635212,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 643489887}
   - {fileID: 1116168874}
+  - {fileID: 404803250}
   - {fileID: 637537672}
   - {fileID: 2110417453}
   - {fileID: 1852331896}
@@ -635237,7 +635243,6 @@ SceneRoots:
   - {fileID: 8453392325034191144}
   - {fileID: 946785809}
   - {fileID: 3111974829184511274}
-  - {fileID: 404803250}
   - {fileID: 1604748200}
   - {fileID: 1007991143}
   - {fileID: 332391006}
