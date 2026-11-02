@@ -15,6 +15,7 @@ public class WolfTriggerZone : MonoBehaviour
             if (wolfAudio != null && wolfClip != null)
             {
                 wolfAudio.PlayOneShot (wolfClip);
+                gameObject.SetActive(false);
             }
         }
     }
