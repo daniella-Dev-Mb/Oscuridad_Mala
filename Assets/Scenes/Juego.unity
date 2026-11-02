@@ -191703,7 +191703,7 @@ Transform:
   m_GameObject: {fileID: 643489884}
   serializedVersion: 2
   m_LocalRotation: {x: 0.19652565, y: 0, z: 0, w: 0.98049873}
-  m_LocalPosition: {x: 321, y: 6.194658, z: 125.10437}
+  m_LocalPosition: {x: 321, y: 6.19466, z: 125.05437}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -215478,7 +215478,7 @@ Transform:
   m_GameObject: {fileID: 714312083}
   serializedVersion: 2
   m_LocalRotation: {x: 0.19652599, y: 0, z: 0, w: 0.9804987}
-  m_LocalPosition: {x: 321, y: 6.194658, z: 125.10437}
+  m_LocalPosition: {x: 321, y: 6.19466, z: 125.05437}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -355051,19 +355051,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3559528243761924574, guid: f61b1316590fe104fbddfb48ce988146, type: 3}
       propertyPath: rolloffCustomCurve.m_Curve.Array.data[0].time
-      value: 0.25
+      value: 0.032497406
       objectReference: {fileID: 0}
     - target: {fileID: 3559528243761924574, guid: f61b1316590fe104fbddfb48ce988146, type: 3}
       propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].time
-      value: 0.4537506
+      value: 0.3125
       objectReference: {fileID: 0}
     - target: {fileID: 3559528243761924574, guid: f61b1316590fe104fbddfb48ce988146, type: 3}
       propertyPath: rolloffCustomCurve.m_Curve.Array.data[2].time
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3559528243761924574, guid: f61b1316590fe104fbddfb48ce988146, type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[0].value
+      value: 0.99264145
+      objectReference: {fileID: 0}
+    - target: {fileID: 3559528243761924574, guid: f61b1316590fe104fbddfb48ce988146, type: 3}
       propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].value
-      value: 0.4147339
+      value: 0.3160553
       objectReference: {fileID: 0}
     - target: {fileID: 3559528243761924574, guid: f61b1316590fe104fbddfb48ce988146, type: 3}
       propertyPath: rolloffCustomCurve.m_Curve.Array.data[2].value
@@ -355075,7 +355079,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3559528243761924574, guid: f61b1316590fe104fbddfb48ce988146, type: 3}
       propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].inSlope
-      value: -1.4002095
+      value: -1.0004
       objectReference: {fileID: 0}
     - target: {fileID: 3559528243761924574, guid: f61b1316590fe104fbddfb48ce988146, type: 3}
       propertyPath: rolloffCustomCurve.m_Curve.Array.data[2].inSlope
@@ -355091,7 +355095,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3559528243761924574, guid: f61b1316590fe104fbddfb48ce988146, type: 3}
       propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].outSlope
-      value: -1.4002095
+      value: -1.0004
       objectReference: {fileID: 0}
     - target: {fileID: 3559528243761924574, guid: f61b1316590fe104fbddfb48ce988146, type: 3}
       propertyPath: rolloffCustomCurve.m_Curve.Array.data[2].inWeight
@@ -355103,7 +355107,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3559528243761924574, guid: f61b1316590fe104fbddfb48ce988146, type: 3}
       propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].outWeight
-      value: 0.17990409
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3559528243761924574, guid: f61b1316590fe104fbddfb48ce988146, type: 3}
       propertyPath: rolloffCustomCurve.m_Curve.Array.data[2].outWeight
@@ -634302,7 +634306,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5999664928201516565, guid: 5ee650c3d81fdb44aa04874307f30530, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 127.05
+      value: 127
       objectReference: {fileID: 0}
     - target: {fileID: 5999664928201516565, guid: 5ee650c3d81fdb44aa04874307f30530, type: 3}
       propertyPath: m_LocalRotation.w
@@ -634494,6 +634498,7 @@ SceneRoots:
   - {fileID: 1116168874}
   - {fileID: 404803250}
   - {fileID: 637537672}
+  - {fileID: 8453392325034191144}
   - {fileID: 2110417453}
   - {fileID: 1852331896}
   - {fileID: 1358154716}
@@ -634520,7 +634525,6 @@ SceneRoots:
   - {fileID: 1083844045}
   - {fileID: 714312089}
   - {fileID: 1184427752}
-  - {fileID: 8453392325034191144}
   - {fileID: 946785809}
   - {fileID: 3111974829184511274}
   - {fileID: 332391006}
