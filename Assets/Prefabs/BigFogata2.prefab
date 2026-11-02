@@ -178,6 +178,7 @@ Transform:
   m_Children:
   - {fileID: 640478340547899351}
   - {fileID: 3557952017087990680}
+  - {fileID: 2584442895807854315}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &3119290578640880547
@@ -357,6 +358,68 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SaveZone
   player: {fileID: 0}
   zone: 60
+--- !u!1001 &2732805017413712246
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1539125476479867352}
+    m_Modifications:
+    - target: {fileID: 446162790868176797, guid: 932ac0855569f9f4aa17f15a0e922471, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 446162790868176797, guid: 932ac0855569f9f4aa17f15a0e922471, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 446162790868176797, guid: 932ac0855569f9f4aa17f15a0e922471, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 446162790868176797, guid: 932ac0855569f9f4aa17f15a0e922471, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 446162790868176797, guid: 932ac0855569f9f4aa17f15a0e922471, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 446162790868176797, guid: 932ac0855569f9f4aa17f15a0e922471, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 446162790868176797, guid: 932ac0855569f9f4aa17f15a0e922471, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 446162790868176797, guid: 932ac0855569f9f4aa17f15a0e922471, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 446162790868176797, guid: 932ac0855569f9f4aa17f15a0e922471, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 446162790868176797, guid: 932ac0855569f9f4aa17f15a0e922471, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5644395788404789593, guid: 932ac0855569f9f4aa17f15a0e922471, type: 3}
+      propertyPath: m_Name
+      value: Fuego fogata
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 932ac0855569f9f4aa17f15a0e922471, type: 3}
+--- !u!4 &2584442895807854315 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 446162790868176797, guid: 932ac0855569f9f4aa17f15a0e922471, type: 3}
+  m_PrefabInstance: {fileID: 2732805017413712246}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6503685620841523834
 PrefabInstance:
   m_ObjectHideFlags: 0

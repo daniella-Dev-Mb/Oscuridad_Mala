@@ -107,7 +107,6 @@ public class FuelSpawner : MonoBehaviour
                 continue;
             }
 
-            // Consultar el collider asignado evita rechazos por terrenos superpuestos.
             Vector3 rayOrigin = new Vector3(x, terrain.transform.position.y + size.y + 10f, z);
             if (!groundCollider.Raycast(new Ray(rayOrigin, Vector3.down), out RaycastHit hit, size.y + 20f))
                 continue;
@@ -157,7 +156,6 @@ public class FuelSpawner : MonoBehaviour
             obstacleLayers, QueryTriggerInteraction.Ignore);
         foreach (Collider obstacle in obstacles)
         {
-            // La pendiente del suelo no es un obstaculo para apoyar la botella.
             if (obstacle is TerrainCollider) continue;
             return true;
         }

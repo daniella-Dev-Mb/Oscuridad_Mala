@@ -1,9 +1,11 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 [RequireComponent(typeof(SphereCollider), typeof(Rigidbody))]
 public class FuelPickup : MonoBehaviour
 {
-    [Min(1)] public int cantidad = 1;
+    [FormerlySerializedAs("cantidad")]
+    [Min(0.1f)] public float fuelSeconds = 30f;
     bool collected;
 
     void Awake()
@@ -16,7 +18,7 @@ public class FuelPickup : MonoBehaviour
 
     public bool TryCollect(PlayerController player)
     {
-        if (!collected && player != null && player.AddFuel(cantidad))
+        if (!collected && player != null && player.AddFuel(fuelSeconds))
         {
             collected = true;
             gameObject.SetActive(false);
