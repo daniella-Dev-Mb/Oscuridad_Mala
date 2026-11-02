@@ -332683,7 +332683,7 @@ Light:
   serializedVersion: 12
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 3
+  m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -635018,13 +635018,13 @@ PrefabInstance:
       propertyPath: 'footsteps.Array.data[8]'
       value: 
       objectReference: {fileID: 8300000, guid: ea17b6be8eff7a14b83192ba7a84021f, type: 3}
-    - target: {fileID: 2807472773043143946, guid: 5ee650c3d81fdb44aa04874307f30530, type: 3}
-      propertyPath: 'footsteps.Array.data[9]'
-      value: 
-      objectReference: {fileID: 8300000, guid: 9f56c5c96148b474bbbcbe90ea4057f3, type: 3}
     - target: {fileID: 5804569789971068585, guid: 5ee650c3d81fdb44aa04874307f30530, type: 3}
       propertyPath: Loop
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5925336508955528549, guid: 5ee650c3d81fdb44aa04874307f30530, type: 3}
+      propertyPath: lantern
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5999664928201516565, guid: 5ee650c3d81fdb44aa04874307f30530, type: 3}
       propertyPath: m_LocalPosition.x
@@ -635073,38 +635073,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6343539816052980911, guid: 5ee650c3d81fdb44aa04874307f30530, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8453392325034191146}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ee650c3d81fdb44aa04874307f30530, type: 3}
---- !u!1 &8453392325034191145 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6343539816052980911, guid: 5ee650c3d81fdb44aa04874307f30530, type: 3}
-  m_PrefabInstance: {fileID: 8453392325034191144}
-  m_PrefabAsset: {fileID: 0}
---- !u!195 &8453392325034191146
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8453392325034191145}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 0
 --- !u!1001 &8872175665980363738
 PrefabInstance:
   m_ObjectHideFlags: 0
