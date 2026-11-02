@@ -637675,6 +637675,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Radio 1 - fogataRami
       objectReference: {fileID: 0}
+    - target: {fileID: 1302572390727968218, guid: c52f48869ac49d04597b228e9bea627d, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -7506775038784856749, guid: e5c44e8ebd687a34ebf44fe1db4b5a57, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
