@@ -634146,7 +634146,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1496732325816709664, guid: 048b5cbff510a0d46b808f7037136297, type: 3}
       propertyPath: m_Name
-      value: Radio(PlaceHoder) (1)
+      value: Radio Final
       objectReference: {fileID: 0}
     - target: {fileID: 3250743232715959866, guid: 048b5cbff510a0d46b808f7037136297, type: 3}
       propertyPath: m_LocalPosition.x
@@ -634193,9 +634193,41 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5549817577033471377, guid: 048b5cbff510a0d46b808f7037136297, type: 3}
+      propertyPath: MaxDistance
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5549817577033471377, guid: 048b5cbff510a0d46b808f7037136297, type: 3}
       propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6518152789605965293, guid: 048b5cbff510a0d46b808f7037136297, type: 3}
+      propertyPath: m_Size.y
+      value: 4.385544
+      objectReference: {fileID: 0}
+    - target: {fileID: 6518152789605965293, guid: 048b5cbff510a0d46b808f7037136297, type: 3}
+      propertyPath: m_Size.z
+      value: 1.2504965
+      objectReference: {fileID: 0}
+    - target: {fileID: 6518152789605965293, guid: 048b5cbff510a0d46b808f7037136297, type: 3}
+      propertyPath: m_Center.x
+      value: 0.00000002987273
+      objectReference: {fileID: 0}
+    - target: {fileID: 6518152789605965293, guid: 048b5cbff510a0d46b808f7037136297, type: 3}
+      propertyPath: m_Center.y
+      value: 1.6927725
+      objectReference: {fileID: 0}
+    - target: {fileID: 6518152789605965293, guid: 048b5cbff510a0d46b808f7037136297, type: 3}
+      propertyPath: m_Center.z
+      value: 0.12524703
+      objectReference: {fileID: 0}
+    - target: {fileID: 7800711042145409292, guid: 048b5cbff510a0d46b808f7037136297, type: 3}
+      propertyPath: buttonClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 8a94303902bde3f45a387fc0948fbec8, type: 3}
+    - target: {fileID: 7800711042145409292, guid: 048b5cbff510a0d46b808f7037136297, type: 3}
+      propertyPath: initialClip
+      value: 
+      objectReference: {fileID: 8300000, guid: c08dd49bd68d3f647a3bcaff3deb07f8, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -634382,6 +634414,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1022023561898252500, guid: c52f48869ac49d04597b228e9bea627d, type: 3}
+      propertyPath: m_Size.x
+      value: 0.9999998
+      objectReference: {fileID: 0}
+    - target: {fileID: 1022023561898252500, guid: c52f48869ac49d04597b228e9bea627d, type: 3}
+      propertyPath: m_Size.y
+      value: 4.0479655
+      objectReference: {fileID: 0}
+    - target: {fileID: 1022023561898252500, guid: c52f48869ac49d04597b228e9bea627d, type: 3}
+      propertyPath: m_Center.y
+      value: 1.523987
+      objectReference: {fileID: 0}
+    - target: {fileID: 1302572390727968218, guid: c52f48869ac49d04597b228e9bea627d, type: 3}
+      propertyPath: MaxDistance
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4436632056102831557, guid: c52f48869ac49d04597b228e9bea627d, type: 3}
       propertyPath: m_Enabled
       value: 0
