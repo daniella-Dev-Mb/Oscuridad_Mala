@@ -35575,6 +35575,11 @@ Mesh:
       - serializedVersion: 1
         m_IndexStart: 0
         m_IndexCount: 0
+--- !u!4 &121018113 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 707152385253613792, guid: 5ee650c3d81fdb44aa04874307f30530, type: 3}
+  m_PrefabInstance: {fileID: 8453392325034191144}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &121120428
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46134,7 +46139,7 @@ PrefabInstance:
     - target: {fileID: 9214517125167251, guid: aef58b33dc14c1344b09f483ecde0ab4, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 1764187718}
+      objectReference: {fileID: 1514308205}
     - target: {fileID: 705932959819304236, guid: aef58b33dc14c1344b09f483ecde0ab4, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -215350,7 +215355,7 @@ MonoBehaviour:
   m_StreamingVersion: 20241001
   m_LegacyPriority: 0
   Target:
-    TrackingTarget: {fileID: 1764187719}
+    TrackingTarget: {fileID: 121018113}
     LookAtTarget: {fileID: 0}
     CustomLookAtTarget: 0
   Lens:
@@ -217406,7 +217411,7 @@ PrefabInstance:
     - target: {fileID: 9214517125167251, guid: aef58b33dc14c1344b09f483ecde0ab4, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 1764187718}
+      objectReference: {fileID: 1514308205}
     - target: {fileID: 705932959819304236, guid: aef58b33dc14c1344b09f483ecde0ab4, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -299548,7 +299553,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: c08dd49bd68d3f647a3bcaff3deb07f8, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -299561,7 +299566,7 @@ AudioSource:
   MinDistance: 1.5
   MaxDistance: 4
   Pan2D: 0
-  rolloffMode: 2
+  rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -355172,7 +355177,7 @@ PrefabInstance:
     - target: {fileID: 3812132686010574499, guid: f61b1316590fe104fbddfb48ce988146, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 1764187718}
+      objectReference: {fileID: 1514308205}
     - target: {fileID: 4105513220856705295, guid: f61b1316590fe104fbddfb48ce988146, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -364909,7 +364914,7 @@ PrefabInstance:
     - target: {fileID: 9214517125167251, guid: aef58b33dc14c1344b09f483ecde0ab4, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 1764187718}
+      objectReference: {fileID: 1514308205}
     - target: {fileID: 705932959819304236, guid: aef58b33dc14c1344b09f483ecde0ab4, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -405265,7 +405270,7 @@ PrefabInstance:
     - target: {fileID: 9214517125167251, guid: aef58b33dc14c1344b09f483ecde0ab4, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 1764187718}
+      objectReference: {fileID: 1514308205}
     - target: {fileID: 705932959819304236, guid: aef58b33dc14c1344b09f483ecde0ab4, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -471971,7 +471976,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: a01223ffbfa75d741b9c682af1aa6835, type: 3}
+  m_Resource: {fileID: 8300000, guid: c09c0b8e25b95b644acedb0fccc7fb03, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -471984,7 +471989,7 @@ AudioSource:
   MinDistance: 1.5
   MaxDistance: 4
   Pan2D: 0
-  rolloffMode: 2
+  rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -519985,6 +519990,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 363667321667496792, guid: f5d92fb3bd3173742940228d9da2f75d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1029021027035312610, guid: f5d92fb3bd3173742940228d9da2f75d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 321
@@ -520053,16 +520062,6 @@ PrefabInstance:
       addedObject: {fileID: 477759396}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5d92fb3bd3173742940228d9da2f75d, type: 3}
---- !u!4 &1764187718 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1029021027035312610, guid: f5d92fb3bd3173742940228d9da2f75d, type: 3}
-  m_PrefabInstance: {fileID: 1764187717}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1764187719 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7579564092381784561, guid: f5d92fb3bd3173742940228d9da2f75d, type: 3}
-  m_PrefabInstance: {fileID: 1764187717}
-  m_PrefabAsset: {fileID: 0}
 --- !u!43 &1764851363
 Mesh:
   m_ObjectHideFlags: 0
@@ -634590,6 +634589,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5549817577033471377, guid: 048b5cbff510a0d46b808f7037136297, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -634603,6 +634606,54 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2807472773043143946, guid: 5ee650c3d81fdb44aa04874307f30530, type: 3}
+      propertyPath: footsteps.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2807472773043143946, guid: 5ee650c3d81fdb44aa04874307f30530, type: 3}
+      propertyPath: 'footsteps.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 13ca92e42d489a54f8cd342ba2f49d68, type: 3}
+    - target: {fileID: 2807472773043143946, guid: 5ee650c3d81fdb44aa04874307f30530, type: 3}
+      propertyPath: 'footsteps.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 13ca92e42d489a54f8cd342ba2f49d68, type: 3}
+    - target: {fileID: 2807472773043143946, guid: 5ee650c3d81fdb44aa04874307f30530, type: 3}
+      propertyPath: 'footsteps.Array.data[2]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 13ca92e42d489a54f8cd342ba2f49d68, type: 3}
+    - target: {fileID: 2807472773043143946, guid: 5ee650c3d81fdb44aa04874307f30530, type: 3}
+      propertyPath: 'footsteps.Array.data[3]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 3915e967937bb8c4e8ce2f35bbf75b12, type: 3}
+    - target: {fileID: 2807472773043143946, guid: 5ee650c3d81fdb44aa04874307f30530, type: 3}
+      propertyPath: 'footsteps.Array.data[4]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 3915e967937bb8c4e8ce2f35bbf75b12, type: 3}
+    - target: {fileID: 2807472773043143946, guid: 5ee650c3d81fdb44aa04874307f30530, type: 3}
+      propertyPath: 'footsteps.Array.data[5]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 3915e967937bb8c4e8ce2f35bbf75b12, type: 3}
+    - target: {fileID: 2807472773043143946, guid: 5ee650c3d81fdb44aa04874307f30530, type: 3}
+      propertyPath: 'footsteps.Array.data[6]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 23d759770aa3ac14bbb872c6286282a7, type: 3}
+    - target: {fileID: 2807472773043143946, guid: 5ee650c3d81fdb44aa04874307f30530, type: 3}
+      propertyPath: 'footsteps.Array.data[7]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 35913b51cfafc364cad3f4b8cbaa2808, type: 3}
+    - target: {fileID: 2807472773043143946, guid: 5ee650c3d81fdb44aa04874307f30530, type: 3}
+      propertyPath: 'footsteps.Array.data[8]'
+      value: 
+      objectReference: {fileID: 8300000, guid: ea17b6be8eff7a14b83192ba7a84021f, type: 3}
+    - target: {fileID: 2807472773043143946, guid: 5ee650c3d81fdb44aa04874307f30530, type: 3}
+      propertyPath: 'footsteps.Array.data[9]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 9f56c5c96148b474bbbcbe90ea4057f3, type: 3}
+    - target: {fileID: 5804569789971068585, guid: 5ee650c3d81fdb44aa04874307f30530, type: 3}
+      propertyPath: Loop
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5999664928201516565, guid: 5ee650c3d81fdb44aa04874307f30530, type: 3}
       propertyPath: m_LocalPosition.x
       value: 321
