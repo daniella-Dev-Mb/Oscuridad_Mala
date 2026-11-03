@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Radio : MonoBehaviour
 {
@@ -9,7 +10,13 @@ public class Radio : MonoBehaviour
     public AudioClip buttonClip;
     public AudioClip[] buttonClips = new AudioClip[0];
     public AudioClip[] channels = new AudioClip[0];
+    public DialoguePlayer dialogue;
+    public AudioClip broadcast;
+    public SubtitleLine[] broadcastSubtitles = new SubtitleLine[0];
+    public UnityEvent onBroadcastFinished = new UnityEvent();
     public bool IsOn { get; private set; }
+    public bool HasBroadcast { get; private set; }
+    bool broadcastPending;
     int channel = -1;
     int nextButton;
 
@@ -25,12 +32,14 @@ public class Radio : MonoBehaviour
     public string GetMessage(PlayerController player)
     {
         if (!IsOn) return player.pilas > 0 ? "E: poner pila y encender" : "Necesitás una pila";
+        if (broadcastPending) return "Escuchando radio...";
+        if (broadcast != null) return "E: escuchar radio";
         return channels.Length == 0 && changedClip == null ? "Radio encendida - audio pendiente" : "E: cambiar emisora";
     }
 
     void Update()
     {
-        if (IsOn && source != null && !source.loop && !source.isPlaying && Time.timeScale > 0f)
+        if (IsOn && !broadcastPending && source != null && !source.loop && !source.isPlaying && Time.timeScale > 0f)
             PlayStatic();
     }
 
@@ -57,6 +66,7 @@ public class Radio : MonoBehaviour
     public void Interact(PlayerController player)
     {
         if (player == null || player.IsDefeated || source == null) return;
+        if (broadcastPending) return;
         if (!IsOn)
         {
             if (player.pilas <= 0) return;
@@ -67,6 +77,13 @@ public class Radio : MonoBehaviour
             return;
         }
         PlayButton();
+        if (dialogue != null && broadcast != null)
+        {
+            var finished = new UnityEvent();
+            finished.AddListener(FinishBroadcast);
+            broadcastPending = dialogue.Play(broadcast, broadcastSubtitles, "Radio", finished, source);
+            return;
+        }
         if (channels.Length > 0)
         {
             channel = (channel + 1) % channels.Length;
@@ -81,5 +98,14 @@ public class Radio : MonoBehaviour
         source.loop = false;
         if (source.clip != null) source.Play();
         else source.Stop();
+    }
+
+    void FinishBroadcast()
+    {
+        broadcastPending = false;
+        PlayStatic();
+        if (HasBroadcast) return;
+        HasBroadcast = true;
+        onBroadcastFinished.Invoke();
     }
 }
