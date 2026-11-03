@@ -217,4 +217,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfdf5bd7be3c7424e874ed3e9b260cb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FuelPickup
-  fuelSeconds: 30
+  fuelSeconds: 60

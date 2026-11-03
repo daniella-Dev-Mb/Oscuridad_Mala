@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(BoxCollider))]
 public class SoundTrigger : MonoBehaviour
@@ -6,7 +7,16 @@ public class SoundTrigger : MonoBehaviour
     public AudioSource source;
     ///////////placeholder
     public AudioClip clip;
+    public DialoguePlayer dialogue;
+    public SubtitleLine[] subtitles = new SubtitleLine[0];
+    public string speaker = "Voz";
+    public SoundTrigger prerequisite;
+    public Radio requiredRadio;
+    public bool playOnExit;
+    public bool playPrerequisiteOnExit;
+    public UnityEvent onFinished = new UnityEvent();
     public bool Played { get; private set; }
+    bool exited;
 
     void Awake()
     {
@@ -14,16 +24,50 @@ public class SoundTrigger : MonoBehaviour
         if (source != null) source.playOnAwake = false;
     }
 
-    void OnTriggerEnter(Collider other)
+    bool IsPlayer(Collider other)
     {
         PlayerController player = other.GetComponentInParent<PlayerController>();
-        if (player != null && player.isActiveAndEnabled && !player.IsDefeated) Play();
+        return player != null && player.isActiveAndEnabled && !player.IsDefeated;
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (IsPlayer(other)) exited = false;
+        if (!playOnExit && IsPlayer(other)) Play();
+    }
+
+    void OnTriggerStay(Collider other)
+    {
+        if (!playOnExit && IsPlayer(other)) Play();
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (playOnExit && IsPlayer(other))
+        {
+            exited = true;
+            if (playPrerequisiteOnExit && prerequisite != null) prerequisite.Play();
+            Play();
+        }
+    }
+
+    void Update()
+    {
+        if (playOnExit && exited && !Played) Play();
     }
 
     public void Play()
     {
-        if (Played || source == null || clip == null) return;
-        source.PlayOneShot(clip);
-        Played = true;
+        if (Played || clip == null || (prerequisite != null && !prerequisite.Played)) return;
+        if (requiredRadio != null && !requiredRadio.HasBroadcast) return;
+        if (dialogue != null)
+        {
+            Played = dialogue.Play(clip, subtitles, speaker, onFinished);
+        }
+        else if (source != null)
+        {
+            source.PlayOneShot(clip);
+            Played = true;
+        }
     }
 }
