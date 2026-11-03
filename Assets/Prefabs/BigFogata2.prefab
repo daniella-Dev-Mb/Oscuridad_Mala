@@ -156,6 +156,8 @@ GameObject:
   - component: {fileID: 3119290578640880547}
   - component: {fileID: 3559528243761924574}
   - component: {fileID: 3812132686010574499}
+  - component: {fileID: 4865883375392810658}
+  - component: {fileID: -8913919947109776703}
   m_Layer: 0
   m_Name: BigFogata2
   m_TagString: Untagged
@@ -358,6 +360,39 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SaveZone
   player: {fileID: 0}
   zone: 60
+--- !u!135 &4865883375392810658
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7209474754431907108}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 60
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-8913919947109776703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7209474754431907108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eae02bb154016ff48a89029c11977e6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CampMusicTrigger
 --- !u!1001 &2732805017413712246
 PrefabInstance:
   m_ObjectHideFlags: 0
