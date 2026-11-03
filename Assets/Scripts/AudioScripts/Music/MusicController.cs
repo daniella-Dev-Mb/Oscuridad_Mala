@@ -1,3 +1,5 @@
+
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
@@ -37,6 +39,11 @@ public class MusicController : MonoBehaviour
     private bool isInCamp;
     private bool gameFinished;
 
+    private AudioSource currentSource;
+    private Coroutine stopCoroutine;
+
+    private AudioSource[] sources;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -48,9 +55,7 @@ public class MusicController : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
 
-        SceneManager.sceneLoaded += OnSceneLoaded;
-
-        AudioSource[] sources =
+        sources = new AudioSource[]
         {
             mainMenuSource,
             bonfiresSource,
@@ -60,17 +65,23 @@ public class MusicController : MonoBehaviour
             loseSource
         };
 
+        // Preparamos las canciones sin reproducirlas.
         foreach (AudioSource source in sources)
         {
-            if (source == null || source.clip == null)
+            if (source == null)
                 continue;
 
             source.loop = true;
             source.playOnAwake = false;
-            source.Play();
+            source.Stop();
         }
 
-        ApplySceneMusic(SceneManager.GetActiveScene().name, true);
+        SceneManager.sceneLoaded += OnSceneLoaded;
+
+        ApplySceneMusic(
+            SceneManager.GetActiveScene().name,
+            true
+        );
     }
 
     private void OnDestroy()
@@ -82,26 +93,38 @@ public class MusicController : MonoBehaviour
         Instance = null;
     }
 
-    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    private void OnSceneLoaded(
+        Scene scene,
+        LoadSceneMode mode)
     {
         ApplySceneMusic(scene.name, false);
     }
 
-    private void ApplySceneMusic(string sceneName, bool instant)
+    private void ApplySceneMusic(
+        string sceneName,
+        bool instant)
     {
         if (sceneName == menuScene)
         {
             isInCamp = false;
             gameFinished = false;
 
-            mainMenu.TransitionTo(instant ? 0f : normalFade);
+            ChangeMusic(
+                mainMenu,
+                mainMenuSource,
+                instant ? 0f : normalFade
+            );
         }
         else if (sceneName == gameScene)
         {
             isInCamp = false;
             gameFinished = false;
 
-            bonfires.TransitionTo(instant ? 0f : normalFade);
+            ChangeMusic(
+                bonfires,
+                bonfiresSource,
+                instant ? 0f : normalFade
+            );
         }
         else if (sceneName == winScene)
         {
@@ -113,46 +136,154 @@ public class MusicController : MonoBehaviour
         }
     }
 
+    // Control central de todas las transiciones.
+    private void ChangeMusic(
+        AudioMixerSnapshot snapshot,
+        AudioSource newSource,
+        float fadeTime)
+    {
+        if (snapshot == null || newSource == null)
+        {
+            Debug.LogWarning(
+                "Falta configurar un Snapshot o AudioSource."
+            );
+            return;
+        }
+
+        if (newSource.clip == null)
+        {
+            Debug.LogWarning(
+                "El AudioSource no tiene AudioClip."
+            );
+            return;
+        }
+
+        // Si ya estamos escuchando esta musica,
+        // no la reiniciamos innecesariamente.
+        if (currentSource == newSource)
+            return;
+
+        // Cancelamos cualquier limpieza anterior.
+        if (stopCoroutine != null)
+        {
+            StopCoroutine(stopCoroutine);
+            stopCoroutine = null;
+        }
+
+        // La nueva cancion empieza desde cero.
+        newSource.Stop();
+        newSource.time = 0f;
+
+        // Iniciamos la transicion del mixer.
+        snapshot.TransitionTo(fadeTime);
+
+        // Reproducimos el nuevo tema.
+        newSource.Play();
+
+        currentSource = newSource;
+
+        if (fadeTime <= 0f)
+        {
+            StopInactiveSources();
+        }
+        else
+        {
+            // Conservamos las canciones anteriores
+            // hasta completar el crossfade.
+            stopCoroutine = StartCoroutine(
+                StopAfterFade(fadeTime)
+            );
+        }
+    }
+
+    private IEnumerator StopAfterFade(float delay)
+    {
+        yield return new WaitForSecondsRealtime(delay);
+
+        StopInactiveSources();
+        stopCoroutine = null;
+    }
+
+    private void StopInactiveSources()
+    {
+        foreach (AudioSource source in sources)
+        {
+            if (source == null || source == currentSource)
+                continue;
+
+            if (source.isPlaying)
+                source.Stop();
+        }
+    }
+
+    // FOGATAS
     public void EnterBonfire()
     {
         if (gameFinished || isInCamp)
             return;
 
-        bonfires.TransitionTo(normalFade);
+        ChangeMusic(
+            bonfires,
+            bonfiresSource,
+            normalFade
+        );
     }
 
+    // EXPLORACION
     public void ExitBonfire()
     {
         if (gameFinished || isInCamp)
             return;
 
-        exploration.TransitionTo(normalFade);
+        ChangeMusic(
+            exploration,
+            explorationSource,
+            normalFade
+        );
     }
 
+    // CAMPAMENTO
     public void EnterCamp()
     {
         if (gameFinished || isInCamp)
             return;
 
         isInCamp = true;
-        camp.TransitionTo(campFade);
+
+        ChangeMusic(
+            camp,
+            campSource,
+            campFade
+        );
     }
 
+    // VICTORIA
     public void WinGame()
     {
         if (gameFinished)
             return;
 
         gameFinished = true;
-        win.TransitionTo(winFade);
+
+        ChangeMusic(
+            win,
+            winSource,
+            winFade
+        );
     }
 
+    // DERROTA
     public void LoseGame()
     {
         if (gameFinished)
             return;
 
         gameFinished = true;
-        lose.TransitionTo(loseFade);
+
+        ChangeMusic(
+            lose,
+            loseSource,
+            loseFade
+        );
     }
 }
