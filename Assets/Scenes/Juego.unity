@@ -15492,6 +15492,7 @@ MonoBehaviour:
   prerequisite: {fileID: 396404924}
   requiredRadio: {fileID: 0}
   playOnExit: 1
+  playPrerequisiteOnExit: 0
   onFinished:
     m_PersistentCalls:
       m_Calls: []
@@ -45492,6 +45493,7 @@ MonoBehaviour:
   prerequisite: {fileID: 47439610}
   requiredRadio: {fileID: 1125549853}
   playOnExit: 1
+  playPrerequisiteOnExit: 0
   onFinished:
     m_PersistentCalls:
       m_Calls:
@@ -116380,6 +116382,7 @@ MonoBehaviour:
   prerequisite: {fileID: 0}
   requiredRadio: {fileID: 1634133479}
   playOnExit: 0
+  playPrerequisiteOnExit: 0
   onFinished:
     m_PersistentCalls:
       m_Calls: []
@@ -204583,7 +204586,7 @@ AudioSource:
   m_GameObject: {fileID: 681777987}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 3209822718387900027, guid: e5c44e8ebd687a34ebf44fe1db4b5a57, type: 2}
+  OutputAudioMixerGroup: {fileID: -7506775038784856749, guid: e5c44e8ebd687a34ebf44fe1db4b5a57, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
@@ -204948,6 +204951,7 @@ MonoBehaviour:
   prerequisite: {fileID: 0}
   requiredRadio: {fileID: 0}
   playOnExit: 0
+  playPrerequisiteOnExit: 0
   onFinished:
     m_PersistentCalls:
       m_Calls: []
@@ -246436,6 +246440,7 @@ MonoBehaviour:
   prerequisite: {fileID: 746481795}
   requiredRadio: {fileID: 0}
   playOnExit: 0
+  playPrerequisiteOnExit: 0
   onFinished:
     m_PersistentCalls:
       m_Calls: []
@@ -303994,7 +303999,7 @@ AudioSource:
   m_GameObject: {fileID: 1016987245}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 3209822718387900027, guid: e5c44e8ebd687a34ebf44fe1db4b5a57, type: 2}
+  OutputAudioMixerGroup: {fileID: -7506775038784856749, guid: e5c44e8ebd687a34ebf44fe1db4b5a57, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
@@ -311279,6 +311284,7 @@ MonoBehaviour:
   prerequisite: {fileID: 809918435}
   requiredRadio: {fileID: 0}
   playOnExit: 0
+  playPrerequisiteOnExit: 0
   onFinished:
     m_PersistentCalls:
       m_Calls: []
@@ -337083,7 +337089,7 @@ AudioSource:
   m_GameObject: {fileID: 1125549851}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 3209822718387900027, guid: e5c44e8ebd687a34ebf44fe1db4b5a57, type: 2}
+  OutputAudioMixerGroup: {fileID: -7506775038784856749, guid: e5c44e8ebd687a34ebf44fe1db4b5a57, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
@@ -482772,7 +482778,7 @@ AudioSource:
   m_GameObject: {fileID: 1634133478}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 3209822718387900027, guid: e5c44e8ebd687a34ebf44fe1db4b5a57, type: 2}
+  OutputAudioMixerGroup: {fileID: -7506775038784856749, guid: e5c44e8ebd687a34ebf44fe1db4b5a57, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
@@ -602287,7 +602293,7 @@ AudioSource:
   m_GameObject: {fileID: 2032419543}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 3209822718387900027, guid: e5c44e8ebd687a34ebf44fe1db4b5a57, type: 2}
+  OutputAudioMixerGroup: {fileID: -7506775038784856749, guid: e5c44e8ebd687a34ebf44fe1db4b5a57, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
@@ -637281,6 +637287,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5549817577033471377, guid: 048b5cbff510a0d46b808f7037136297, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -7506775038784856749, guid: e5c44e8ebd687a34ebf44fe1db4b5a57, type: 2}
+    - target: {fileID: 5549817577033471377, guid: 048b5cbff510a0d46b808f7037136297, type: 3}
       propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
       value: 1
       objectReference: {fileID: 0}
@@ -637679,10 +637689,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Radio 1 - fogataRami
       objectReference: {fileID: 0}
-    - target: {fileID: 1302572390727968218, guid: c52f48869ac49d04597b228e9bea627d, type: 3}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: -7506775038784856749, guid: e5c44e8ebd687a34ebf44fe1db4b5a57, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
