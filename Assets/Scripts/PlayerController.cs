@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.AI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -227,7 +228,16 @@ public class PlayerController : MonoBehaviour
 
         Vector3 movement = direction * currentSpeed;
         movement.y = verticalSpeed;
-        characterController.Move(movement * Time.deltaTime);
+
+        //esto lo hice yo Daniella
+        Vector3 displacement = movement.normalized * currentSpeed * Time.deltaTime;
+        Vector3 targetPosition = transform.position + displacement;
+
+        if (!NavMesh.Raycast(transform.position, targetPosition, out _, NavMesh.AllAreas))
+        {
+            characterController.Move(displacement);
+        }
+        //
     }
 
     void UpdateAnimation()
