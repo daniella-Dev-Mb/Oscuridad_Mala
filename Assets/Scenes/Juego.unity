@@ -15468,7 +15468,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &47439610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17463,6 +17463,8 @@ GameObject:
   - component: {fileID: 56664264}
   - component: {fileID: 56664263}
   - component: {fileID: 56664262}
+  - component: {fileID: 56664267}
+  - component: {fileID: 56664266}
   m_Layer: 0
   m_Name: Voz  (6)
   m_TagString: Untagged
@@ -17485,12 +17487,12 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 4, z: 1}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!23 &56664263
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17498,7 +17500,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 56664261}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -17563,6 +17565,60 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &56664266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 56664261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 754d9ef7e50c99a4cb2b6279075f08ff, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::SoundTrigger
+  source: {fileID: 974070250}
+  clip: {fileID: 8300000, guid: e1ef8fae125e93f4da2800b13affcb2b, type: 3}
+  dialogue: {fileID: 974070248}
+  subtitles:
+  - start: 0
+    end: 3.397375
+    text: "Pedro, esto ya no es gracioso. Ven\xED para ac\xE1."
+  speaker: Jugador
+  prerequisite: {fileID: 0}
+  requiredRadio: {fileID: 0}
+  playOnExit: 0
+  playPrerequisiteOnExit: 0
+  onFinished:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!54 &56664267
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 56664261}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!43 &56817902
 Mesh:
   m_ObjectHideFlags: 0
@@ -45539,7 +45595,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &141796021
 Transform:
   m_ObjectHideFlags: 0
@@ -46903,11 +46959,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!4 &148223718 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2695317369674839047, guid: aef58b33dc14c1344b09f483ecde0ab4, type: 3}
-  m_PrefabInstance: {fileID: 148223715}
-  m_PrefabAsset: {fileID: 0}
 --- !u!43 &149346646
 Mesh:
   m_ObjectHideFlags: 0
@@ -49078,6 +49129,9 @@ GameObject:
   - component: {fileID: 159793400}
   - component: {fileID: 159793399}
   - component: {fileID: 159793398}
+  - component: {fileID: 159793404}
+  - component: {fileID: 159793403}
+  - component: {fileID: 159793402}
   m_Layer: 0
   m_Name: Pensamiento antes (1)
   m_TagString: Untagged
@@ -49102,7 +49156,7 @@ SphereCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
@@ -49113,7 +49167,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 159793397}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -49178,6 +49232,81 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &159793402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159793397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 754d9ef7e50c99a4cb2b6279075f08ff, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::SoundTrigger
+  source: {fileID: 974070250}
+  clip: {fileID: 8300000, guid: 63b53c99996671f47a2254163a3d4fb2, type: 3}
+  dialogue: {fileID: 974070248}
+  subtitles:
+  - start: 0
+    end: 2.4221876
+    text: "\xBFD\xF3nde carajo se meti\xF3 este pibe?"
+  speaker: Pensamiento
+  prerequisite: {fileID: 0}
+  requiredRadio: {fileID: 0}
+  playOnExit: 0
+  playPrerequisiteOnExit: 0
+  onFinished:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!54 &159793403
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159793397}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &159793404
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159793397}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 4, z: 1}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!43 &160548330
 Mesh:
   m_ObjectHideFlags: 0
@@ -96354,6 +96483,9 @@ GameObject:
   - component: {fileID: 318337738}
   - component: {fileID: 318337737}
   - component: {fileID: 318337736}
+  - component: {fileID: 318337742}
+  - component: {fileID: 318337741}
+  - component: {fileID: 318337740}
   m_Layer: 0
   m_Name: Pensamiento despues (4)
   m_TagString: Untagged
@@ -96378,7 +96510,7 @@ SphereCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
@@ -96389,7 +96521,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 318337735}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -96454,6 +96586,81 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &318337740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318337735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 754d9ef7e50c99a4cb2b6279075f08ff, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::SoundTrigger
+  source: {fileID: 974070250}
+  clip: {fileID: 8300000, guid: 894ca4459de4e00408f035983768e562, type: 3}
+  dialogue: {fileID: 974070248}
+  subtitles:
+  - start: 0
+    end: 2.7008126
+    text: No puede ser que justo sea un pibe.
+  speaker: Pensamiento
+  prerequisite: {fileID: 0}
+  requiredRadio: {fileID: 1125549853}
+  playOnExit: 0
+  playPrerequisiteOnExit: 0
+  onFinished:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!54 &318337741
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318337735}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &318337742
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318337735}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 4, z: 1}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!43 &318461667
 Mesh:
   m_ObjectHideFlags: 0
@@ -118652,7 +118859,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &396404924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126772,6 +126979,9 @@ GameObject:
   - component: {fileID: 417955161}
   - component: {fileID: 417955160}
   - component: {fileID: 417955159}
+  - component: {fileID: 417955165}
+  - component: {fileID: 417955164}
+  - component: {fileID: 417955163}
   m_Layer: 0
   m_Name: Pensamiento despues (3)
   m_TagString: Untagged
@@ -126796,7 +127006,7 @@ SphereCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
@@ -126807,7 +127017,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 417955158}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -126872,6 +127082,81 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &417955163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 417955158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 754d9ef7e50c99a4cb2b6279075f08ff, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::SoundTrigger
+  source: {fileID: 974070250}
+  clip: {fileID: 8300000, guid: 2be87cbd0d42ffb4b98d64cdf60e751b, type: 3}
+  dialogue: {fileID: 974070248}
+  subtitles:
+  - start: 0
+    end: 2.7936876
+    text: "Qu\xE9 lugar eleg\xED."
+  speaker: Pensamiento
+  prerequisite: {fileID: 0}
+  requiredRadio: {fileID: 2032419545}
+  playOnExit: 0
+  playPrerequisiteOnExit: 0
+  onFinished:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!54 &417955164
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 417955158}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &417955165
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 417955158}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 4, z: 1}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!43 &417985648
 Mesh:
   m_ObjectHideFlags: 0
@@ -163531,6 +163816,8 @@ GameObject:
   - component: {fileID: 535388080}
   - component: {fileID: 535388079}
   - component: {fileID: 535388078}
+  - component: {fileID: 535388083}
+  - component: {fileID: 535388082}
   m_Layer: 0
   m_Name: Voz  (5)
   m_TagString: Untagged
@@ -163553,12 +163840,12 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 4, z: 1}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!23 &535388079
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -163566,7 +163853,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 535388077}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -163631,6 +163918,60 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &535388082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 535388077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 754d9ef7e50c99a4cb2b6279075f08ff, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::SoundTrigger
+  source: {fileID: 974070250}
+  clip: {fileID: 8300000, guid: ad64e5ef6bb458249945bf1a79149b22, type: 3}
+  dialogue: {fileID: 974070248}
+  subtitles:
+  - start: 0
+    end: 2.5846875
+    text: Dale, pendejo, que tenemos que ir a dormir.
+  speaker: Jugador
+  prerequisite: {fileID: 0}
+  requiredRadio: {fileID: 0}
+  playOnExit: 0
+  playPrerequisiteOnExit: 0
+  onFinished:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!54 &535388083
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 535388077}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &536091333
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -180652,6 +180993,9 @@ GameObject:
   - component: {fileID: 592463424}
   - component: {fileID: 592463423}
   - component: {fileID: 592463422}
+  - component: {fileID: 592463428}
+  - component: {fileID: 592463427}
+  - component: {fileID: 592463426}
   m_Layer: 0
   m_Name: Pensamiento despues (5)
   m_TagString: Untagged
@@ -180676,7 +181020,7 @@ SphereCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
@@ -180687,7 +181031,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 592463421}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -180752,6 +181096,93 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &592463426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 592463421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 754d9ef7e50c99a4cb2b6279075f08ff, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::SoundTrigger
+  source: {fileID: 974070250}
+  clip: {fileID: 8300000, guid: f54f3141fb1085d449b6446f3c9331e1, type: 3}
+  dialogue: {fileID: 974070248}
+  subtitles:
+  - start: 0
+    end: 7.3448124
+    text: "Pero... \xBFPedrito? Pero... \xBFC\xF3mo me pude negar as\xED?"
+  speaker: Pensamiento
+  prerequisite: {fileID: 0}
+  requiredRadio: {fileID: 6554837105329702762}
+  playOnExit: 0
+  playPrerequisiteOnExit: 0
+  onFinished:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 974070248}
+        m_TargetAssemblyTypeName: DialoguePlayer, Assembly-CSharp
+        m_MethodName: FinishGame
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName:
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument:
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!54 &592463427
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 592463421}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &592463428
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 592463421}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 4, z: 1}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &593032467
 GameObject:
   m_ObjectHideFlags: 0
@@ -183648,6 +184079,8 @@ GameObject:
   - component: {fileID: 607345315}
   - component: {fileID: 607345314}
   - component: {fileID: 607345313}
+  - component: {fileID: 607345318}
+  - component: {fileID: 607345317}
   m_Layer: 0
   m_Name: Voz  (1)
   m_TagString: Untagged
@@ -183670,12 +184103,12 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 4, z: 1}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!23 &607345314
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -183683,7 +184116,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 607345312}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -183748,6 +184181,60 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &607345317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607345312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 754d9ef7e50c99a4cb2b6279075f08ff, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::SoundTrigger
+  source: {fileID: 974070250}
+  clip: {fileID: 8300000, guid: cb5eee540b3cdc7459c323e351cd5707, type: 3}
+  dialogue: {fileID: 974070248}
+  subtitles:
+  - start: 0
+    end: 3.5366876
+    text: "Todav\xEDa no puedo irme sin encontrar a mi hijo."
+  speaker: Jugador
+  prerequisite: {fileID: 0}
+  requiredRadio: {fileID: 0}
+  playOnExit: 0
+  playPrerequisiteOnExit: 0
+  onFinished:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!54 &607345318
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607345312}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &608106839
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -184176,6 +184663,8 @@ GameObject:
   - component: {fileID: 609428816}
   - component: {fileID: 609428815}
   - component: {fileID: 609428814}
+  - component: {fileID: 609428819}
+  - component: {fileID: 609428818}
   m_Layer: 0
   m_Name: Voz  (4)
   m_TagString: Untagged
@@ -184198,12 +184687,12 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 4, z: 1}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!23 &609428815
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -184211,7 +184700,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 609428813}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -184276,6 +184765,60 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &609428818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 609428813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 754d9ef7e50c99a4cb2b6279075f08ff, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::SoundTrigger
+  source: {fileID: 974070250}
+  clip: {fileID: 8300000, guid: a88a10b992a4c614d8101b82601c9fa5, type: 3}
+  dialogue: {fileID: 974070248}
+  subtitles:
+  - start: 0
+    end: 2.5615
+    text: "Dale, que no me est\xE1s haciendo gracia, \xBFeh?"
+  speaker: Jugador
+  prerequisite: {fileID: 0}
+  requiredRadio: {fileID: 0}
+  playOnExit: 0
+  playPrerequisiteOnExit: 0
+  onFinished:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!54 &609428819
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 609428813}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &609459137
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -207917,7 +208460,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &683920184
 Transform:
   m_ObjectHideFlags: 0
@@ -208020,6 +208563,9 @@ GameObject:
   - component: {fileID: 684100225}
   - component: {fileID: 684100224}
   - component: {fileID: 684100223}
+  - component: {fileID: 684100229}
+  - component: {fileID: 684100228}
+  - component: {fileID: 684100227}
   m_Layer: 0
   m_Name: Pensamiento antes (2)
   m_TagString: Untagged
@@ -208044,7 +208590,7 @@ SphereCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
@@ -208055,7 +208601,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 684100222}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -208120,6 +208666,81 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &684100227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684100222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 754d9ef7e50c99a4cb2b6279075f08ff, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::SoundTrigger
+  source: {fileID: 974070250}
+  clip: {fileID: 8300000, guid: ec667e252ecf05f4183757250a5085ee, type: 3}
+  dialogue: {fileID: 974070248}
+  subtitles:
+  - start: 0
+    end: 2.5150626
+    text: "Ah, mir\xE1, una radio."
+  speaker: Pensamiento
+  prerequisite: {fileID: 0}
+  requiredRadio: {fileID: 0}
+  playOnExit: 0
+  playPrerequisiteOnExit: 0
+  onFinished:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!54 &684100228
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684100222}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &684100229
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684100222}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 4, z: 1}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1001 &684319135
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -222081,11 +222702,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!4 &718350919 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2695317369674839047, guid: aef58b33dc14c1344b09f483ecde0ab4, type: 3}
-  m_PrefabInstance: {fileID: 718350916}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &719074125
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -229499,7 +230115,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &746481795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -249382,7 +249998,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &809918435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -294903,11 +295519,11 @@ MonoBehaviour:
   subtitleLabel: {fileID: 1700138785}
   victoryScene: WinScene
   campfires:
-  - {fileID: 1220535537}
-  - {fileID: 1187227250}
-  - {fileID: 1365462440}
-  - {fileID: 148223718}
-  - {fileID: 718350919}
+  - {fileID: 440319110}
+  - {fileID: 1634133480}
+  - {fileID: 2032419550}
+  - {fileID: 1125549858}
+  - {fileID: 1603415811}
 --- !u!4 &974070249
 Transform:
   m_ObjectHideFlags: 0
@@ -314362,7 +314978,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1040837257
 Transform:
   m_ObjectHideFlags: 0
@@ -340016,33 +340632,12 @@ MonoBehaviour:
   buttonClips: []
   channels: []
   dialogue: {fileID: 974070248}
-  broadcast: {fileID: 8300000, guid: f52e0af67985ec04e9134041febf24b7, type: 3}
+  broadcast: {fileID: 8300000, guid: d42ccd98bac76ee43ac47b6f774dc5e8, type: 3}
   broadcastSubtitles:
   - start: 0
-    end: 5.78
-    text: "Este chico se llamaba Pedrito. Era un ni\xF1o de ocho a\xF1os, el cual
-      disfrutaba de"
-  - start: 5.48
-    end: 7.36
-    text: "un d\xEDa cualquiera en el campamento."
-  - start: 7.4
-    end: 12
-    text: "Y por la negligencia de los guardavidas, unas canoas sin inspecci\xF3n
-      se dieron"
-  - start: 11.7
-    end: 17.92
-    text: "vuelta. Se ahogaron varios pibes y a los dem\xE1s los pudieron sacar a
-      tiempo, pero"
-  - start: 17.62
-    end: 24.12
-    text: "era demasiado tarde. Esta historia afect\xF3 a muchas personas cercanas
-      y a los que"
-  - start: 23.82
-    end: 26.78
-    text: estaban en el instante del accidente.
-  - start: 31.28
-    end: 35.58025
-    text: "En otras noticias, el chorip\xE1n subi\xF3 y el d\xF3lar tambi\xE9n."
+    end: 5.8586874
+    text: "Varios ni\xF1os salieron lastimados de gravedad y uno falleci\xF3 en el
+      acto."
   onBroadcastFinished:
     m_PersistentCalls:
       m_Calls: []
@@ -406764,6 +407359,8 @@ GameObject:
   - component: {fileID: 1353737291}
   - component: {fileID: 1353737290}
   - component: {fileID: 1353737289}
+  - component: {fileID: 1353737294}
+  - component: {fileID: 1353737293}
   m_Layer: 0
   m_Name: Voz  (7)
   m_TagString: Untagged
@@ -406786,12 +407383,12 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 4, z: 1}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!23 &1353737290
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -406799,7 +407396,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1353737288}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -406864,6 +407461,60 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1353737293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1353737288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 754d9ef7e50c99a4cb2b6279075f08ff, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::SoundTrigger
+  source: {fileID: 974070250}
+  clip: {fileID: 8300000, guid: 346957911cf64ac4c910d60643a82ee0, type: 3}
+  dialogue: {fileID: 974070248}
+  subtitles:
+  - start: 0
+    end: 3.5135
+    text: "Pedrito, dale, ven\xED."
+  speaker: Jugador
+  prerequisite: {fileID: 0}
+  requiredRadio: {fileID: 0}
+  playOnExit: 0
+  playPrerequisiteOnExit: 0
+  onFinished:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!54 &1353737294
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1353737288}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!43 &1354472610
 Mesh:
   m_ObjectHideFlags: 0
@@ -411051,11 +411702,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aef58b33dc14c1344b09f483ecde0ab4, type: 3}
---- !u!4 &1365462440 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2695317369674839047, guid: aef58b33dc14c1344b09f483ecde0ab4, type: 3}
-  m_PrefabInstance: {fileID: 1365462439}
-  m_PrefabAsset: {fileID: 0}
 --- !u!43 &1367324163
 Mesh:
   m_ObjectHideFlags: 0
@@ -486343,30 +486989,22 @@ MonoBehaviour:
   buttonClips: []
   channels: []
   dialogue: {fileID: 974070248}
-  broadcast: {fileID: 8300000, guid: 33b4321c0f30f2c4c8c33095dcfc48c2, type: 3}
+  broadcast: {fileID: 8300000, guid: 63147f7cc5927ce41b698fb5bccf8287, type: 3}
   broadcastSubtitles:
   - start: 0
-    end: 5.25
-    text: "Ubicado al lado del bosque oscuro, cerca de la ruta n\xFAmero treinta
-      y ocho."
-  - start: 5.19
-    end: 9.039875
-    text: "Aqu\xED sucedi\xF3 el tr\xE1gico accidente donde..."
+    end: 4.96
+    text: "En el d\xEDa de la fecha se cumplen cinco a\xF1os de la clausura del famoso
+      Sunshine"
+  - start: 4.66
+    end: 9.62
+    text: Lake, el campamento de verano ubicado al lado del bosque oscuro y cerca
+      de la
+  - start: 9.32
+    end: 12.267438
+    text: "ruta n\xFAmero treinta y ocho. Aqu\xED..."
   onBroadcastFinished:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 396404924}
-        m_TargetAssemblyTypeName: SoundTrigger, Assembly-CSharp
-        m_MethodName: Play
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!4 &1634133480
 Transform:
   m_ObjectHideFlags: 0
@@ -568611,6 +569249,8 @@ GameObject:
   - component: {fileID: 1911711495}
   - component: {fileID: 1911711494}
   - component: {fileID: 1911711493}
+  - component: {fileID: 1911711498}
+  - component: {fileID: 1911711497}
   m_Layer: 0
   m_Name: Voz  (2)
   m_TagString: Untagged
@@ -568633,12 +569273,12 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 4, z: 1}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!23 &1911711494
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -568646,7 +569286,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1911711492}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -568711,6 +569351,63 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1911711497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1911711492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 754d9ef7e50c99a4cb2b6279075f08ff, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::SoundTrigger
+  source: {fileID: 974070250}
+  clip: {fileID: 8300000, guid: ae874acdc2eff2b4282bca832e09ccde, type: 3}
+  dialogue: {fileID: 974070248}
+  subtitles:
+  - start: 0
+    end: 3.08
+    text: "Hijo, ven\xED para ac\xE1. Dale que se hace tarde."
+  - start: 3.1
+    end: 4.210125
+    text: Tenemos que dormir.
+  speaker: Jugador
+  prerequisite: {fileID: 0}
+  requiredRadio: {fileID: 0}
+  playOnExit: 0
+  playPrerequisiteOnExit: 0
+  onFinished:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!54 &1911711498
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1911711492}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &1912654378
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -594629,6 +595326,8 @@ GameObject:
   - component: {fileID: 1997703086}
   - component: {fileID: 1997703085}
   - component: {fileID: 1997703084}
+  - component: {fileID: 1997703089}
+  - component: {fileID: 1997703088}
   m_Layer: 0
   m_Name: Voz  (3)
   m_TagString: Untagged
@@ -594651,12 +595350,12 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 4, z: 1}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!23 &1997703085
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -594664,7 +595363,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1997703083}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -594729,6 +595428,60 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1997703088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1997703083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 754d9ef7e50c99a4cb2b6279075f08ff, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::SoundTrigger
+  source: {fileID: 974070250}
+  clip: {fileID: 8300000, guid: aebaaf0684e561a448998a6f64f2ac55, type: 3}
+  dialogue: {fileID: 974070248}
+  subtitles:
+  - start: 0
+    end: 2.53825
+    text: "\xBFD\xF3nde te metiste, Pedrito?"
+  speaker: Jugador
+  prerequisite: {fileID: 0}
+  requiredRadio: {fileID: 0}
+  playOnExit: 0
+  playPrerequisiteOnExit: 0
+  onFinished:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!54 &1997703089
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1997703083}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &1997988130
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -605869,12 +606622,15 @@ MonoBehaviour:
   buttonClips: []
   channels: []
   dialogue: {fileID: 974070248}
-  broadcast: {fileID: 8300000, guid: d42ccd98bac76ee43ac47b6f774dc5e8, type: 3}
+  broadcast: {fileID: 8300000, guid: 33b4321c0f30f2c4c8c33095dcfc48c2, type: 3}
   broadcastSubtitles:
   - start: 0
-    end: 5.8586874
-    text: "Varios ni\xF1os salieron lastimados de gravedad y uno falleci\xF3 en el
-      acto."
+    end: 5.25
+    text: "Ubicado al lado del bosque oscuro, cerca de la ruta n\xFAmero treinta
+      y ocho."
+  - start: 5.19
+    end: 9.039875
+    text: "Aqu\xED sucedi\xF3 el tr\xE1gico accidente donde..."
   onBroadcastFinished:
     m_PersistentCalls:
       m_Calls: []
@@ -640549,6 +641305,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Muro trigger - Voz 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1900434075123671228, guid: b597f4f996410a0409603da520aad75b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2437553709315044393, guid: b597f4f996410a0409603da520aad75b, type: 3}
       propertyPath: m_Size.x
       value: 18
@@ -641150,7 +641910,7 @@ PrefabInstance:
     - target: {fileID: 7800711042145409292, guid: 048b5cbff510a0d46b808f7037136297, type: 3}
       propertyPath: broadcast
       value: 
-      objectReference: {fileID: 8300000, guid: 63147f7cc5927ce41b698fb5bccf8287, type: 3}
+      objectReference: {fileID: 8300000, guid: f52e0af67985ec04e9134041febf24b7, type: 3}
     - target: {fileID: 7800711042145409292, guid: 048b5cbff510a0d46b808f7037136297, type: 3}
       propertyPath: buttonClip
       value: 
@@ -641165,41 +641925,91 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7800711042145409292, guid: 048b5cbff510a0d46b808f7037136297, type: 3}
       propertyPath: broadcastSubtitles.Array.size
-      value: 3
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7800711042145409292, guid: 048b5cbff510a0d46b808f7037136297, type: 3}
       propertyPath: broadcastSubtitles.Array.data[0].end
-      value: 4.96
+      value: 5.78
       objectReference: {fileID: 0}
     - target: {fileID: 7800711042145409292, guid: 048b5cbff510a0d46b808f7037136297, type: 3}
       propertyPath: broadcastSubtitles.Array.data[1].end
-      value: 9.62
+      value: 7.36
       objectReference: {fileID: 0}
     - target: {fileID: 7800711042145409292, guid: 048b5cbff510a0d46b808f7037136297, type: 3}
       propertyPath: broadcastSubtitles.Array.data[2].end
-      value: 12.267438
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7800711042145409292, guid: 048b5cbff510a0d46b808f7037136297, type: 3}
+      propertyPath: broadcastSubtitles.Array.data[3].end
+      value: 17.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 7800711042145409292, guid: 048b5cbff510a0d46b808f7037136297, type: 3}
+      propertyPath: broadcastSubtitles.Array.data[4].end
+      value: 24.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7800711042145409292, guid: 048b5cbff510a0d46b808f7037136297, type: 3}
+      propertyPath: broadcastSubtitles.Array.data[5].end
+      value: 26.78
+      objectReference: {fileID: 0}
+    - target: {fileID: 7800711042145409292, guid: 048b5cbff510a0d46b808f7037136297, type: 3}
+      propertyPath: broadcastSubtitles.Array.data[6].end
+      value: 35.58025
       objectReference: {fileID: 0}
     - target: {fileID: 7800711042145409292, guid: 048b5cbff510a0d46b808f7037136297, type: 3}
       propertyPath: broadcastSubtitles.Array.data[0].text
-      value: "En el d\xEDa de la fecha se cumplen cinco a\xF1os de la clausura del
-        famoso Sunshine"
+      value: "Este chico se llamaba Pedrito. Era un ni\xF1o de ocho a\xF1os, el cual
+        disfrutaba de"
       objectReference: {fileID: 0}
     - target: {fileID: 7800711042145409292, guid: 048b5cbff510a0d46b808f7037136297, type: 3}
       propertyPath: broadcastSubtitles.Array.data[1].text
-      value: Lake, el campamento de verano ubicado al lado del bosque oscuro y cerca
-        de la
+      value: "un d\xEDa cualquiera en el campamento."
       objectReference: {fileID: 0}
     - target: {fileID: 7800711042145409292, guid: 048b5cbff510a0d46b808f7037136297, type: 3}
       propertyPath: broadcastSubtitles.Array.data[2].text
-      value: "ruta n\xFAmero treinta y ocho. Aqu\xED..."
+      value: "Y por la negligencia de los guardavidas, unas canoas sin inspecci\xF3n
+        se dieron"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7800711042145409292, guid: 048b5cbff510a0d46b808f7037136297, type: 3}
+      propertyPath: broadcastSubtitles.Array.data[3].text
+      value: "vuelta. Se ahogaron varios pibes y a los dem\xE1s los pudieron sacar
+        a tiempo, pero"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7800711042145409292, guid: 048b5cbff510a0d46b808f7037136297, type: 3}
+      propertyPath: broadcastSubtitles.Array.data[4].text
+      value: "era demasiado tarde. Esta historia afect\xF3 a muchas personas cercanas
+        y a los que"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7800711042145409292, guid: 048b5cbff510a0d46b808f7037136297, type: 3}
+      propertyPath: broadcastSubtitles.Array.data[5].text
+      value: estaban en el instante del accidente.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7800711042145409292, guid: 048b5cbff510a0d46b808f7037136297, type: 3}
+      propertyPath: broadcastSubtitles.Array.data[6].text
+      value: "En otras noticias, el chorip\xE1n subi\xF3 y el d\xF3lar tambi\xE9n."
       objectReference: {fileID: 0}
     - target: {fileID: 7800711042145409292, guid: 048b5cbff510a0d46b808f7037136297, type: 3}
       propertyPath: broadcastSubtitles.Array.data[1].start
-      value: 4.66
+      value: 5.48
       objectReference: {fileID: 0}
     - target: {fileID: 7800711042145409292, guid: 048b5cbff510a0d46b808f7037136297, type: 3}
       propertyPath: broadcastSubtitles.Array.data[2].start
-      value: 9.32
+      value: 7.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7800711042145409292, guid: 048b5cbff510a0d46b808f7037136297, type: 3}
+      propertyPath: broadcastSubtitles.Array.data[3].start
+      value: 11.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7800711042145409292, guid: 048b5cbff510a0d46b808f7037136297, type: 3}
+      propertyPath: broadcastSubtitles.Array.data[4].start
+      value: 17.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 7800711042145409292, guid: 048b5cbff510a0d46b808f7037136297, type: 3}
+      propertyPath: broadcastSubtitles.Array.data[5].start
+      value: 23.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 7800711042145409292, guid: 048b5cbff510a0d46b808f7037136297, type: 3}
+      propertyPath: broadcastSubtitles.Array.data[6].start
+      value: 31.28
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -641209,6 +642019,17 @@ PrefabInstance:
       addedObject: {fileID: 992812997}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 048b5cbff510a0d46b808f7037136297, type: 3}
+--- !u!114 &6554837105329702762 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7800711042145409292, guid: 048b5cbff510a0d46b808f7037136297, type: 3}
+  m_PrefabInstance: {fileID: 6554837105329702761}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4da8dc1ddb5007946b2724b0e39dba0d, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::Radio
 --- !u!1001 &8453392325034191144
 PrefabInstance:
   m_ObjectHideFlags: 0
