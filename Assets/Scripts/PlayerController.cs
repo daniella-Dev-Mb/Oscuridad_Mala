@@ -120,7 +120,7 @@ public class PlayerController : MonoBehaviour
         NearbyObject = null;
         nearbyFuel = null;
         InteractionMessage = "";
-        Vector3 origin = transform.position + Vector3.up * interactionHeight;
+        Vector3 origin = characterController.bounds.center;
         float nearest = interactionDistance;
         foreach (Collider candidate in Physics.OverlapSphere(origin, interactionDistance,
             Physics.DefaultRaycastLayers, QueryTriggerInteraction.Collide))

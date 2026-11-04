@@ -9,6 +9,11 @@ public class PlayerAudio : MonoBehaviour
     public AudioClip[] footsteps;
     public AudioClip ignitionClip;
     public AudioClip refillClip;
+    public AudioSource lowFuelSource;
+    public AudioClip lowFuelClip;
+    public DialoguePlayer dialogue;
+    [Range(0f, 1f)] public float lowFuelThreshold = 0.25f;
+    [Min(0f)] public float lowFuelCooldown = 15f;
     ///////////placeholder
     public AudioClip extinguishClip;
 
@@ -43,6 +48,7 @@ public class PlayerAudio : MonoBehaviour
     CharacterController body;
     float travelled;
     int lastStep = -1;
+    float laughTimer;
 
     void Awake()
     {
@@ -64,6 +70,7 @@ public class PlayerAudio : MonoBehaviour
     void LateUpdate()
     {
         bool paused = Time.deltaTime <= 0f || player.IsDefeated;
+        UpdateLowFuel(paused);
         if (lanternSource != null)
         {
             lanternSource.volume = lanternVolume * player.LanternCharge;
@@ -101,5 +108,23 @@ public class PlayerAudio : MonoBehaviour
         if (footstepsSource != null) footstepsSource.Stop();
         if (lanternSource != null) lanternSource.Stop();
         if (ignitionSource != null) ignitionSource.Stop();
+        if (lowFuelSource != null) lowFuelSource.Stop();
+    }
+
+    void UpdateLowFuel(bool paused)
+    {
+        if (lowFuelSource == null || lowFuelClip == null) return;
+        if (paused) { lowFuelSource.Pause(); return; }
+        lowFuelSource.UnPause();
+        if (player.LanternCharge <= 0f || player.LanternCharge > lowFuelThreshold)
+        {
+            laughTimer = 0f;
+            lowFuelSource.Stop();
+            return;
+        }
+        laughTimer -= Time.deltaTime;
+        if (laughTimer > 0f || lowFuelSource.isPlaying || (dialogue != null && dialogue.IsBusy)) return;
+        lowFuelSource.PlayOneShot(lowFuelClip);
+        laughTimer = lowFuelCooldown;
     }
 }
