@@ -324,12 +324,20 @@ AudioMixerSnapshotController:
   m_SnapshotID: 6bcb42aac6f999349b555eb9746bb0a2
   m_FloatValues:
     1b6feaa0c91c0744daa520b2559b1582: -80
-    ebec97b3fcacddb4fa3dc12f99e5fe68: 0.23288241
+    c7feae21bb049df479eebf341943e6eb: -65
+    db910fc20d8b3af41816aed9d3575e2e: -65
+    ebec97b3fcacddb4fa3dc12f99e5fe68: -21
+    5073e415bb76c7e42a1563d3afe484c2: 0
     c9641665180bf1249a046ba7bbaac590: -0.10231405
     2b81c93983596534eaf6aec45a727772: -80
+    fc0453497531569479e077e4b5630573: -15
+    88428eb95124e0f47a6b13815de410e1: 0
     614875daad6305d41848c6ed159cef88: -80
     41fca2bc16b654d40811d3b7fe14f1ad: -80
+    3c6c1d6d643db204a86f5769f1a19316: -65
     39c33ead8a699f342a93ae92504a0423: -80
+    2d38cefd6134c2f49828a2ad78c6637b: 0
+    9a27166f58108d2478c0398fd1b93022: 20
   m_TransitionOverrides: {}
 --- !u!243 &-683329103894124460
 AudioMixerGroupController:
@@ -368,7 +376,7 @@ AudioMixerController:
   - {fileID: -2577148817928918976}
   m_StartSnapshot: {fileID: 24500006}
   m_SuspendThreshold: -80
-  m_EnableSuspend: 1
+  m_EnableSuspend: 0
   m_UpdateMode: 0
   m_ExposedParameters: []
   m_AudioMixerGroupViews:
@@ -387,7 +395,7 @@ AudioMixerController:
     - 53a12b3e9ea31814c872323cf54da458
     name: View
   m_CurrentViewIndex: 0
-  m_TargetSnapshot: {fileID: 24500006}
+  m_TargetSnapshot: {fileID: -5461584334896841293}
 --- !u!243 &24300002
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
@@ -436,8 +444,8 @@ AudioMixerSnapshotController:
   m_SnapshotID: aa6a57dd19945ff44bf24a1476cc807b
   m_FloatValues:
     1b6feaa0c91c0744daa520b2559b1582: -80
-    c7feae21bb049df479eebf341943e6eb: -70
-    db910fc20d8b3af41816aed9d3575e2e: -70
+    c7feae21bb049df479eebf341943e6eb: -60
+    db910fc20d8b3af41816aed9d3575e2e: -60
     ebec97b3fcacddb4fa3dc12f99e5fe68: -20.6
     5073e415bb76c7e42a1563d3afe484c2: 0
     c9641665180bf1249a046ba7bbaac590: -80
@@ -447,7 +455,7 @@ AudioMixerSnapshotController:
     614875daad6305d41848c6ed159cef88: -80
     41fca2bc16b654d40811d3b7fe14f1ad: -0.08374829
     0331b02db1a56ed4d86f872ff0436b3f: -0.0861201
-    3c6c1d6d643db204a86f5769f1a19316: -70
+    3c6c1d6d643db204a86f5769f1a19316: -60
     39c33ead8a699f342a93ae92504a0423: -80
     2d38cefd6134c2f49828a2ad78c6637b: 0
     9a27166f58108d2478c0398fd1b93022: 20
