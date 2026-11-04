@@ -2539,6 +2539,11 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 9f56c5c96148b474bbbcbe90ea4057f3, type: 3}
   ignitionClip: {fileID: 8300000, guid: 38d75f6dfc10f7648ba42fa19379ec79, type: 3}
   refillClip: {fileID: 8300000, guid: bc693f01da42de54ca16f6c3452259ff, type: 3}
+  lowFuelSource: {fileID: 0}
+  lowFuelClip: {fileID: 0}
+  dialogue: {fileID: 0}
+  lowFuelThreshold: 0.25
+  lowFuelCooldown: 15
   extinguishClip: {fileID: 0}
   walkStepDistance: 1.8
   runStepDistance: 2.2
