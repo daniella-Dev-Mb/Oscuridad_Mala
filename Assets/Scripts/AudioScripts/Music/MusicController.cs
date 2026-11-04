@@ -65,7 +65,6 @@ public class MusicController : MonoBehaviour
             loseSource
         };
 
-        // Preparamos las canciones sin reproducirlas.
         foreach (AudioSource source in sources)
         {
             if (source == null)
@@ -136,7 +135,6 @@ public class MusicController : MonoBehaviour
         }
     }
 
-    // Control central de todas las transiciones.
     private void ChangeMusic(
         AudioMixerSnapshot snapshot,
         AudioSource newSource,
@@ -158,26 +156,20 @@ public class MusicController : MonoBehaviour
             return;
         }
 
-        // Si ya estamos escuchando esta musica,
-        // no la reiniciamos innecesariamente.
         if (currentSource == newSource)
             return;
 
-        // Cancelamos cualquier limpieza anterior.
         if (stopCoroutine != null)
         {
             StopCoroutine(stopCoroutine);
             stopCoroutine = null;
         }
 
-        // La nueva cancion empieza desde cero.
         newSource.Stop();
         newSource.time = 0f;
 
-        // Iniciamos la transicion del mixer.
         snapshot.TransitionTo(fadeTime);
 
-        // Reproducimos el nuevo tema.
         newSource.Play();
 
         currentSource = newSource;
@@ -188,8 +180,6 @@ public class MusicController : MonoBehaviour
         }
         else
         {
-            // Conservamos las canciones anteriores
-            // hasta completar el crossfade.
             stopCoroutine = StartCoroutine(
                 StopAfterFade(fadeTime)
             );
@@ -216,7 +206,6 @@ public class MusicController : MonoBehaviour
         }
     }
 
-    // FOGATAS
     public void EnterBonfire()
     {
         if (gameFinished || isInCamp)
@@ -229,7 +218,6 @@ public class MusicController : MonoBehaviour
         );
     }
 
-    // EXPLORACION
     public void ExitBonfire()
     {
         if (gameFinished || isInCamp)
@@ -242,7 +230,6 @@ public class MusicController : MonoBehaviour
         );
     }
 
-    // CAMPAMENTO
     public void EnterCamp()
     {
         if (gameFinished || isInCamp)
@@ -257,7 +244,6 @@ public class MusicController : MonoBehaviour
         );
     }
 
-    // VICTORIA
     public void WinGame()
     {
         if (gameFinished)
@@ -272,7 +258,6 @@ public class MusicController : MonoBehaviour
         );
     }
 
-    // DERROTA
     public void LoseGame()
     {
         if (gameFinished)
