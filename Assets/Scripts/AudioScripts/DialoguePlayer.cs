@@ -31,18 +31,20 @@ public class DialoguePlayer : MonoBehaviour
         public SubtitleLine[] lines;
         public string speaker;
         public UnityEvent finished;
+        public float endTime;
+        public bool continueAudio;
     }
 
     readonly Queue<Request> queue = new Queue<Request>();
     AudioSource currentSource;
 
     public bool Play(AudioClip clip, SubtitleLine[] lines, string speaker,
-        UnityEvent finished, AudioSource audioSource = null)
+        UnityEvent finished, AudioSource audioSource = null, float endTime = 0f, bool continueAudio = false)
     {
         AudioSource target = audioSource != null ? audioSource : source;
         if (clip == null || target == null || player == null || player.IsDefeated) return false;
         queue.Enqueue(new Request { clip = clip, source = target, lines = lines,
-            speaker = speaker, finished = finished });
+            speaker = speaker, finished = finished, endTime = endTime, continueAudio = continueAudio });
         if (!IsBusy) StartCoroutine(PlayQueue());
         return true;
     }
@@ -64,6 +66,7 @@ public class DialoguePlayer : MonoBehaviour
                 if (player == null || player.IsDefeated) break;
                 if (Time.timeScale <= 0f && !paused) { currentSource.Pause(); paused = true; }
                 else if (Time.timeScale > 0f && paused) { currentSource.UnPause(); paused = false; }
+                if (!paused && request.endTime > 0f && currentSource.time >= request.endTime) break;
                 string text = "";
                 if (request.lines != null)
                 {
@@ -81,6 +84,7 @@ public class DialoguePlayer : MonoBehaviour
                 yield return null;
             }
             if (subtitlePanel != null) subtitlePanel.SetActive(false);
+            if (currentSource != null && request.endTime > 0f && !request.continueAudio) currentSource.Stop();
             currentSource = null;
             if (player == null || player.IsDefeated) { queue.Clear(); break; }
             request.finished?.Invoke();
