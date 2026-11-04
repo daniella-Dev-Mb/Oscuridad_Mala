@@ -296416,7 +296416,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 130
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -338081,7 +338081,7 @@ Transform:
   m_GameObject: {fileID: 1113227487}
   serializedVersion: 2
   m_LocalRotation: {x: -0.5050543, y: 0.4948942, z: 0.49489433, w: 0.50505406}
-  m_LocalPosition: {x: 0.019009527, y: 0.09859497, z: 0.13815244}
+  m_LocalPosition: {x: 0.019009527, y: 0.82, z: 0.13815244}
   m_LocalScale: {x: 94.13497, y: 137.47585, z: 288.47064}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -341972,7 +341972,7 @@ Transform:
   m_GameObject: {fileID: 1125549851}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.29814607, z: -0, w: 0.9545203}
-  m_LocalPosition: {x: 515, y: 3.882073, z: 321.05}
+  m_LocalPosition: {x: 515, y: 4.021, z: 321.05}
   m_LocalScale: {x: 0.43211758, y: 0.2087357, z: 0.64553785}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -361698,7 +361698,7 @@ PrefabInstance:
     - target: {fileID: 3559528243761924574, guid: f61b1316590fe104fbddfb48ce988146, type: 3}
       propertyPath: OutputAudioMixerGroup
       value: 
-      objectReference: {fileID: 3209822718387900027, guid: e5c44e8ebd687a34ebf44fe1db4b5a57, type: 2}
+      objectReference: {fileID: 9189646636409895987, guid: e5c44e8ebd687a34ebf44fe1db4b5a57, type: 2}
     - target: {fileID: 3559528243761924574, guid: f61b1316590fe104fbddfb48ce988146, type: 3}
       propertyPath: rolloffCustomCurve.m_Curve.Array.size
       value: 3
@@ -608783,7 +608783,7 @@ Transform:
   m_GameObject: {fileID: 2032419543}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.29814607, z: -0, w: 0.9545203}
-  m_LocalPosition: {x: 371, y: 3.882073, z: 349.05}
+  m_LocalPosition: {x: 371, y: 4.033, z: 349.05}
   m_LocalScale: {x: 0.43211758, y: 0.2087357, z: 0.64553785}
   m_ConstrainProportionsScale: 0
   m_Children:
