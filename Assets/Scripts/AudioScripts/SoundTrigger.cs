@@ -16,6 +16,7 @@ public class SoundTrigger : MonoBehaviour
     public bool playPrerequisiteOnExit;
     public UnityEvent onFinished = new UnityEvent();
     public bool Played { get; private set; }
+    public bool Finished { get; private set; }
     bool exited;
 
     void Awake()
@@ -62,12 +63,21 @@ public class SoundTrigger : MonoBehaviour
         if (requiredRadio != null && !requiredRadio.HasBroadcast) return;
         if (dialogue != null)
         {
-            Played = dialogue.Play(clip, subtitles, speaker, onFinished);
+            var finished = new UnityEvent();
+            finished.AddListener(Finish);
+            Played = dialogue.Play(clip, subtitles, speaker, finished);
         }
         else if (source != null)
         {
             source.PlayOneShot(clip);
             Played = true;
+            Invoke(nameof(Finish), clip.length);
         }
+    }
+
+    void Finish()
+    {
+        Finished = true;
+        onFinished.Invoke();
     }
 }
